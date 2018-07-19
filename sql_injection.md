@@ -1,3 +1,5 @@
+*Disclaimer: My English is far from perfect and this text has been written when it was even worse. If you can't stand such a bad grammar and can afford a bit of proofreading, [here is the source on Github](https://github.com/colshrapnel/phpdelusions.net/blob/master/sql_injection.md), all pull requests to which will be accepted with gratitude.*
+
 In this article I will try to explain the nature of SQL injection; show how to make your queries 100% safe; and disclose numerous delusions, superstitions and bad practices related to the topic of the SQL Injection prevention.
 
 ###Don't panic.#dontpanic
@@ -20,7 +22,7 @@ which compiles into the malicious sequence
 
     SELECT * FROM users WHERE name='Bobby';DROP TABLE users; -- '
 
-Call it injection? Wrong. It's **an improperly formatted string literal.**    
+Call it an injection? Wrong. It's **an improperly formatted string literal.**    
 Which, being properly formatted, won't harm anyone:
 
     SELECT * FROM users WHERE name='Bobby\';DROP TABLE users; -- '
@@ -35,13 +37,13 @@ with no less harmful result:
 
     SELECT * FROM users WHERE id =1;DROP TABLE users; -- '
 
-Call it injection again? Yet again wrong. It's **an improperly formatted numeric literal.** Be it properly formatted, a honest 
+Call it injection again? Yet again wrong. It's **an improperly formatted numeric literal.** Be it properly formatted, an honest 
 
     SELECT * FROM users where id = 1
 
 statement would be positively harmless.
 
-But the point is, **we need to format out queries anyway** - no matter if there is any danger or not. Say, there is no Bobby Tables happened around but honest girl named `Sarah O'Hara` - who would never get into a class if we won't format our query, simply because 
+But the point is, **we need to format out queries anyway** - no matter if there is any danger or not. Say, there is no Bobby Tables happened around but an honest girl named `Sarah O'Hara` - who would never get into a class if we won't format our query, simply because 
 
     INSERT INTO users SET name='Sarah O'Hara'
 
@@ -62,17 +64,17 @@ The truth is, formatting rules are not that easy and cannot be expressed in a si
 For Mysql it would be:
 
 1. Strings
- * have to be added via native prepared statement     
+ * have to be added via a native prepared statement     
 or
  * have to be enclosed in quotes
  * special characters (frankly - the very delimiting quotes) have to be escaped
- * a proper client encoding have to be set   
+ * a proper client encoding has to be set   
 or
- * may be [hex-encoded](https://dev.mysql.com/doc/refman/5.0/en/hexadecimal-literals.html)
+ * could be [hex-encoded](https://dev.mysql.com/doc/refman/5.0/en/hexadecimal-literals.html)
 2. Numbers
- * have to be added via native prepared statement     
+ * have to be added via a native prepared statement     
 or
- * should be filtered out to make sure only numrical characters, a decimal delimiter and a sign
+ * should be filtered out to make sure only numerical characters, a decimal delimiter, and a sign
 3. Identifiers
  * have to be enclosed in backticks
  * special characters (frankly - the very delimiting backticks) have to be escaped
@@ -87,32 +89,34 @@ As you can see, there are *four* whole *sets* of rules, not just one single stat
 
 Because it is manual. And manual means error prone. It depends on the programmer's skill, temper, mood, number of beers last night and so on. As a matter of fact, manual formatting is the very and the only reason for the most injection cases in the world. Why?
 
-1. **Manual formatting can be incomplete.**      
-Let's take the Bobby Tables' case. It's a perfect example of incomplete formatting: a string we have added to the query was only quoted but not escaped! While, as we just learned from the above, quoting and escaping should always go together (along with setting the proper encoding for the escaping function). But in a usual PHP application which does SQL string formatting separately (partly in the query and partly somewhere else), it is very likely that some part of formatting may be simple overlooked.
+1. **Manual formatting can be incomplete.**
+Let's take the Bobby Tables' case. It's a perfect example of incomplete formatting: a string we have added to the query was only quoted, but not escaped! While, as we just learned from the above, quoting and escaping should always go together (along with setting the proper encoding for the escaping function). But in a usual PHP application which does SQL string formatting separately (partly in the query and partly somewhere else), it is very likely that some part of formatting may be simply overlooked.
 
-2. **Manual formatting can be applied to the wrong literal**.       
-Not a big deal as long as we are using *complete formatting* (as it will cause immediate error which can be fixed at the  development phase), but when combined with incomplete formatting it's a real disaster. There are hundreds of answers on the great site of Stack Overflow, suggesting **to escape identifiers** the same way as strings. Which would be completely useless and would cause an SQL injection.
+2. **Manual formatting can be applied to the wrong literal**.
+Not a big deal as long as we are using *complete formatting* (as it will cause an immediate error which can be fixed in the development phase), but when combined with incomplete formatting it's a real disaster. There are hundreds of answers on the great site of Stack Overflow, suggesting **to escape identifiers** the same way as strings. Which would be completely useless and would cause an SQL injection.
 
-3. **Manual formatting is essentially a non-obligatory measure**.      
-First of all, there is obvious lack of attention case, where proper formatting can be simply forgotten.  But there is a real weird case - many PHP users often *intentionally* refuse to apply any formatting, because up to this day they still separate the data to "clean" and "unclean", "user input" and "non-user input", etc. Thinking that a "safe" data don't need any formatting. Which is a plain nonsense - remember Sarah O'Hara. From the formatting point of view, it's the *destination* that matters. A developer has to mind the *type of SQL literal*, not the data source. Is it a string going to the query? It have to be formatted as a string then. No matter if it's from user input or just mysteriously appeared out of nowhere amidst the code execution. 
+3. **Manual formatting is essentially a non-obligatory measure**.
+First of all, there is an obvious lack of attention case, where proper formatting can be simply forgotten. But there is a really weird case - many PHP users often *intentionally* refuse to apply any formatting, because up to this day they still separate the data to "clean" and "unclean", "user input" and "non-user input", etc. Thinking that a "safe" data don't need any formatting. Which is a plain nonsense - remember Sarah O'Hara. From the formatting point of view, it's the *destination* that matters. A developer has to mind the *type of SQL literal*, not the data source. Is it a string going to the query? It has to be formatted as a string then. No matter if it's from user input or just mysteriously appeared out of nowhere amidst the code execution.
 
-4. **Manual formatting can be separated from the actual query execution by a considerable distance.**     
-The most underestimated and overlooked issue. Yet most essential of them all, as it can spoil all the other rules alone, if not followed.     
+4. **Manual formatting can be separated from the actual query execution by a considerable distance.**
+
+The most underestimated and overlooked issue. Yet most essential of them all, as it can spoil all the other rules alone, if not followed.
+
 Almost every PHP user is tempted to do all the "sanitization" in a single place, far away from the actual query execution, and such a wrong approach is a source of innumerable faults alone:
- - first of all, having no query at hand, one cannot tell what kind of SQL literal this certain piece represents - and thus we have both formatting rules (1) and (2) violated at once. 
- - having more than one place for santization (it could be either acentralized facility or in-place formatting), we are calling for a disaster, as one developer would think it was done by another, or was already made somewhere else, etc. 
- - having more than one place for santization, we're introducing another danger, of double-sanitizing data (say, one developer formatted it at the entry point and another - before query execution), which is not dangerous but make one's site look extremely unprofessional
+
+ - first of all, having no query at hand, one cannot tell what kind of SQL literal this a certain piece represents - and thus we have both formatting rules (1) and (2) violated at once.
+ - having more than one place for sanitizing (it could be either a centralized facility or in-place formatting), we are calling for a disaster, as one developer would think it was done by another or was already made somewhere else, etc.
+ - having more than one place for sanitizing, we're introducing another danger, of double-sanitizing data (say, one developer formatted it at the entry point and another - before query execution), which is not dangerous but make one's site look extremely unprofessional
  - premature formatting will spoil the source variable, making it unusable for anything else.
 
 5. After all, manual formatting will always take extra space in the code, making it entangled and bloated.
-
 All right, now you trust me that manual formatting is bad. What do we have to use instead? 
 
 ###Prepared statements.#prepared
 
-Here I need to stop for a while to emphasize the important difference between the implementation of **native** prepared statements supported by the major DBMS, and **the general idea of using a placeholder** to represent the actual data in the query. And to emphasize **real benefits** of a prepared statement.
+Here I need to stop for a while to emphasize the important difference between the implementation of **native** prepared statements supported by the major DBMS and **the general idea of using a placeholder** to represent the actual data in the query. And to emphasize **real benefits** of a prepared statement.
 
-The idea of a native prepared statement is smart and simple: the query and the data are sent to the server separated from each other, and thus there is no chance for them to interfere. Which makes SQL injection outright impossible. But at the same time, native implementation has its limitations, as it supports only two kinds of literals (strings and numbers, namely) which **renders them insufficient and insecure for the real life usage.**
+The idea of a native prepared statement is smart and simple: the query and the data are sent to the server separated from each other, and thus there is no chance for them to interfere. Which makes SQL injection outright impossible. But at the same time, native implementation has its limitations, as it supports only two kinds of literals (strings and numbers, namely) which **renders them insufficient and insecure for the real-life usage.**
 
 There are also some wrong statements about native prepared statements:
 
@@ -121,23 +125,23 @@ There are also some wrong statements about native prepared statements:
 
 And here we came to the main point of the whole article: the general idea of creating an SQL query out of constant part and placeholders, which will be substituted with actual data, which will be **automatically formatted** is indeed a Holy Grail we were looking for.    
 
-The main and most essential benefit of prepared statements is elimination of all the dangers of manual formatting:
+The main and most essential benefit of prepared statements is the elimination of all the dangers of manual formatting:
 
-- prepared statement does the complete formatting - all without programmer's intervention! Just fire and forget.
-- prepared statement does the adequate formatting (as long as we're binding our data using the proper type)
-- prepared statement makes the formatting inviolable!
-- prepared statement does the formatting in the only proper place - right before query execution.
+- a prepared statement does the complete formatting - all without programmer's intervention! Just fire and forget.
+- a prepared statement does the adequate formatting (as long as we're binding our data using the proper type)
+- a prepared statement makes the formatting inviolable!
+- a prepared statement does the formatting in the only proper place - right before query execution.
 
 This is why manual formatting is so much despised nowadays and prepared statements are so honored.
 
 There are two additional but non-essential benefits of using prepared statements:
 
-- prepared statement doesn't spoil the source data which can be used safely somewhere else: shown back in the browser, stored in a cookie, etc.
+- a prepared statement doesn't spoil the source data which can be used safely somewhere else: shown back in the browser, stored in a cookie, etc.
 - a programmer who is lazy enough can make their code dramatically shorter by means of using prepared statements (however, the opposite is true too - a diligent user can write a code for the simple insert of the size of an average novel).
 
 So, "nativeness" of a prepared statement is not that essential, as it proven by PDO, which can just *emulate* a prepared statement, sending the regular query to the server at once, substituting placeholders with the actual data, if `PDO::ATTR_EMULATE_PREPARES` [configuration variable](http://php.net/manual/en/pdo.setattribute.php) is set to `TRUE`. But the data gets **properly formatted** in this case - and therefore this approach is equally safe!
 
-Moreover, **even with the old mysql extension** we can use prepared statements all right! Here is a small function that can offer rock solid security with this old good extension:
+Moreover, **even with the old MySQL extension** we can use prepared statements all right! Here is a small function that can offer rock-solid security with this old good extension:
 
     function paraQuery()
     {
@@ -168,7 +172,7 @@ So the all-embracing rule for the protection:
 
 ####Every dynamical element should go into query via **placeholder**
 
-> Here I need to stop again to make a very important statement: we need to distinguish a **constant** query element from a **dynamical** one. Obviously, our primary concern have to be dynamical parts, just because of their very dynamic nature. While constant value cannot be spoiled by design, and whatever formatting issue can be fixed at development phase, dynamical query element is a distinct matter. Due to its variable nature, **we never can tell if it contain valid value, or not.** This is why it is so important to to use placeholders for all the dynamical query parts.
+> Here I need to stop again to make a very important statement: we need to distinguish a **constant** query element from a **dynamical** one. Obviously, our primary concern has to be dynamical parts, just because of their very dynamic nature. While constant value cannot be spoiled by design, and whatever formatting issue can be fixed at development phase, dynamical query element is a distinct matter. Due to its variable nature, **we never can tell if it contains a valid value, or not.** This is why it is so important to use placeholders for all the dynamical query parts.
 
 "All right" - says you - "I am using prepared statements all the way already. And so what?" Be honest - you aren't. 
 <a name="6">&nbsp;</a>
@@ -178,7 +182,7 @@ In fact, our queries sometimes are not as primitive as primary key lookups. Some
 
 **Nothing.**
 
-For the identifier it would be nothing else... **but old good manual formatting:**
+For the identifier, it would be nothing else... **but old good manual formatting:**
 
     $field = "`".str_replace("`","``",$field)."`";
     $sql   = "SELECT * FROM t ORDER BY $field";
@@ -194,7 +198,7 @@ For the arrays, it will be a whole *program* written to create a query on the fl
     $stm->execute($ids);
     $data = $stm->fetchAll();
 
-And still we have a variable interpolated in the query string, which makes me shivers in the back, although I am sure this code is safe. And it should make you shivers too! 
+And still, we have a variable interpolated in the query string, which makes me shivers in the back, although I am sure this code is safe. And it should make you shiver too! 
 
 So, in all these cases **we are forced to fall back into the stone age of manual formatting!**
 
@@ -209,13 +213,13 @@ Imagine we have a placeholder for the above cases. These two snippets become as 
     $stm->execute([$ids, $category]);
     $data = $stm->fetchAll();
 
-So, here can we make be but one conclusion: regular drivers **have** to be extended to support wider range of data types to be bound. Having devised an idea of new types, we can think of what these types can be:
+So, here can we make be but one conclusion: regular drivers **have** to be extended to support a wider range of data types to be bound. Having devised an idea of new types, we can think of what these types can be:
 
 - identifier placeholder (single identifier)
 - identifier list (comma separated identifiers) 
 - integer list (comma separated integers)
 - strings list (comma separated strings)
-- special SET type consists of comma separated `idientifier=string value` pairs
+- the special SET type consists of a comma-separated `idientifier=string value` pairs
 - you name it
 
 Quite a lot, in addition to existing types.
@@ -232,35 +236,35 @@ won't work in emulation mode, as PDO will format data as strings, whose aren't a
     $stm = $db->prepare('SELECT * FROM t WHERE id=? AND email=?');
     $stm->execute([$id,$email]);
 
-But with our new complex types there is no way to use this approach anymore. Because, for example,  identifier can never be bound as string. So, we have to always set placeholder type explicitly. And it makes a problem: although both PDO and Mysqli offers their own solutions, I wouldn't call any of them viable.
+But with our new complex types, there is no way to use this approach anymore. Because, for example, an identifier can never be bound as a string. So, we have to always set placeholder type explicitly. And it makes a problem: although both PDO and Mysqli offer their own solutions, I wouldn't call any of them viable.
 
-- with PDO's tons of rows with `bindValue` our code is no better than old `mysql_real_escape_string` approach in terms of code size and number of repetitions. 
-- mysqli's bind_param() is a nightmare when you have to bind variable number of values.
-- the worst part: all this manual binding makes *application* code bloated, as we cannot encapsulate  these bindings into some internals.
+- with PDO's tons of rows with `bindValue` our code is no better than old `mysql_real_escape_string` approach in terms of code size and a number of repetitions. 
+- mysqli's bind_param() is a nightmare when you have to bind a variable number of values.
+- the worst part: all this manual binding makes *application* code bloated, as we cannot encapsulate these bindings into some internals.
 
 So, we need a better solution again. And here it is:
 
 ####to mark placeholder with its type!
 
-Not quite a fresh idea, I have to admit. Well-known `printf()` function has been using this very principle since Uinx Epoch: `%s` will be formatted as a string, `%d` as a digit and so on. So, we only have to borrow that brilliant idea for our needs.
+Not quite a fresh idea, I have to admit. Well-known `printf()` function has been using this very principle since Unix Epoch: `%s` will be formatted as a string, `%d` as a digit and so on. So, we only have to borrow that brilliant idea for our needs.
 
 To solve all the problems, we need to extend a regular driver with simple *parser* which will parse a query with type-hinted placeholders, extract type information and use it to format a value.
 
-I am not the first to use this approach with DBAL either. There is [Dibi](http://dibiphp.com/),  [DBSimple](http://en.dklab.ru/lib/DbSimple/) or [NikiC's PDO wrapper](https://github.com/nikic/DB) and some other examples. But it seems to me that their authors underestimated the significance of type-tinted placeholder, taking it as a some sort of syntax sugar, not as essential and cornerstone feature, which it have to be.
+I am not the first to use this approach with DBAL either. There is [Dibi](http://dibiphp.com/),  [DBSimple](http://en.dklab.ru/lib/DbSimple/) or [NikiC's PDO wrapper](https://github.com/nikic/DB) and some other examples. But it seems to me that their authors underestimated the significance of type-tinted placeholder, taking it as some sort of syntax sugar, not as essential and cornerstone feature, which it has to be.
 
-So, I endeavored my own implementation, to emphasize the idea, and called it [SafeMysql](https://github.com/colshrapnel/safemysql), because type-hinted placeholders makes it indeed safer than regular approach. It's also aimed for better usability, to make code cleaner and shorter.
+So, I endeavored my own implementation, to emphasize the idea, and called it [SafeMysql](https://github.com/colshrapnel/safemysql), because type-hinted placeholders make it indeed safer than the regular approach. It's also aimed for better usability, to make code cleaner and shorter.
 
-Although there are some improvements still pending for implementation (such as native placeholders support; named placeholders (like in PDO); un-typed default placeholder treated as string; a couple another data types to support), it's already a complete solution that can be used in any production code.
+Although there are some improvements still pending for implementation (such as native placeholders support; named placeholders (like in PDO); un-typed default placeholder treated as a string; a couple another data types to support), it's already a complete solution that can be used in any production code.
 <a name="8">&nbsp;</a>
 ###Exception that proves the rule.#whitelist
 
-Unfortunately, prepared statement is not a silver bullet too, and cannot offer 100% protection alone. There are two cases where it's either not enough or not applicable at all:
+Unfortunately, a prepared statement is not a silver bullet too, and cannot offer 100% protection alone. There are two cases where it's either not enough or not applicable at all:
 
 1. Remember the last kind of query literals from the section #3 list of formatting rules: SQL keywords. There is no way to format them.
 2. A somewhat tricky case, when we are creating our *list of identifiers* dynamically, based on user input, and there could be fields a user isn't allowed to. The very common case is creating an insert query dynamically based on the keys and values of the `$_POST` array. Although we can format both properly, there is still a possibility for some field like 'admin' or 'permissions' that can be set by site admin only. And these fields should be never allowed from user input. 
 
 And to solve these both cases, we have to implement another approach which is called *whitelisting*.
-In this case every dynamic parameter have to be pre-written in your script already, and all the possible values have to be chosen from that set.    
+In this case, every dynamic parameter has to be pre-written in your script already, and all the possible values have to be chosen from that set.    
 For example, to do dynamic ordering:
 
     $orders  = array("name","price","qty"); //field names
@@ -277,7 +281,7 @@ Note that aforementioned SafeMysql lib supports two functions for whitelisting, 
 <a name="9">&nbsp;</a>
 ###Dynamically built queries.#dynamic 
 
-As this text pretends to be a complete guide for injection protection, I cannot avoid complex queries creation. A usual case of multiple-criteria search, for example. Or any other case where we have to have *arbitrary query parts* added or taken out from query. There is no way to use placeholders in this case - so, we need another mechanism. 
+As this text pretends to be a complete guide for injection protection, I cannot avoid complex queries creation. A usual case of multiple-criteria search, for example. Or any other case where we have to have *arbitrary query parts* added or taken out from the query. There is no way to use placeholders in this case - so, we need another mechanism. 
 
 First, a **query builder** is a king here. The exact case query builders were invented for
 
@@ -301,69 +305,69 @@ But sometimes we have a query that is so complex that makes it to painful to wri
     AND (age = :age or :age is null)
     AND (sex = :sex or :sex is null)
 
-Written this way, we only have to bind our variables, either contains a value or a NULL, to these placeholders. For the NULL values the smart engine would just throw away their conditions, leaving only ones with values!
+Written this way, we only have to bind our variables, either contains a value or a NULL, to these placeholders. For the NULL values, the smart engine would just throw away their conditions, leaving only ones with values!
 
-Either way, one have to bear in mind that resulting query should be always built from only two sources - either constant part or a placeholder.
+Either way, one has to bear in mind that the resulting query should be always built from only two sources - either constant part or a placeholder.
 <a name="10">&nbsp;</a>
 ###Conclusion.#conclusion 
 
 In short, we can formulate two simple rules:
 
-Even dynamically created, an SQL query have to consist of 2 possible kinds of data only:
+Even dynamically created, an SQL query has to consist of 2 possible kinds of data only:
 
 - constant parts hardcoded in the script
-- placeholders for the every dynamical value
+- placeholders for every dynamical value
 
 When followed, these rules will guarantee 100% protection.
 <a name="app1">&nbsp;</a>
 ###Appendix 1. Vocabulary.#vocabulary
 
-Almost everyone, who have fancy to talk on the topic, uses wide range of words, hardly bothering to comprehend their meaning, or - worse of that - having their own idea on the meaning at all. 
+Almost everyone, who have fancy to talk on the topic, uses the wide range of words, hardly bothering to comprehend their meaning, or - worse of that - having their own idea on the meaning at all. 
 
-Surely, the most notorious term is "escaping". Everyone is taking it as "making data clean", "making data safe", "escaping dangerous characters". While all these terms are essentially vague and ambiguous. At the same time, in the mind of average PHP user, "escaping" is strongly connected to the old `mysql_real_escape_thing`, so they have all these matters intermixed, resulting the oldest and callousest of PHP superstitions - "`*_escape_string` prevents from injection attack" while we already learned it is far from it.  
+Surely, the most notorious term is "escaping". Everyone is taking it as "making data clean", "making data safe", "escaping dangerous characters". While all these terms are essentially vague and ambiguous. At the same time, in the mind of average PHP user, "escaping" is strongly connected to the old `mysql_real_escape_thing`, so they have all these matters intermixed, resulting in the oldest and most callous of PHP superstitions - "`*_escape_string` prevents from injection attack" while we already learned it is far from it.  
 
 Instead, the only proper term should be "formatting". While "escaping" should designate only particular part of string formatting. 
 
 The same goes for every other word from the list of "sanitizing", "filtering", "prepared statements" and the like. Think of the meaning (or, rather, if it has any certain meaning at all) before using a word.
 
-Even "sql injection" term itself is extremely ambiguous.  It seems most users take injection literally as adding a second query as shown in the Bobby Tables example. And thus trying to protect by means of forbidding multiple query execution (which would be useless rubbish, of course). Somewhat similar delusion is shared by another lot of people, whose belief is that only DML queries can be considered as injection prone (and thus they don't care for injections in SELECT queries at all).
+Even "SQL injection" term itself is extremely ambiguous.  It seems most users take injection literally as adding a second query as shown in the Bobby Tables example. And thus trying to protect by means of forbidding multiple query execution (which would be useless rubbish, of course). Somewhat similar delusion is shared by another lot of people, whose belief is that only DML queries can be considered as injection prone (and thus they don't care for injections in SELECT queries at all).
 
-So, reading recommendations from various sources, always keep in mind that you have to understand the terminology and - more than that - understand what the author meant (and if there is *any* particular  meaning at all).
+So, reading recommendations from various sources, always keep in mind that you have to understand the terminology and - more than that - understand what the author meant (and if there is *any* particular meaning at all).
 <a name="app2">&nbsp;</a>
 ###Appendix 2. How to protect from of injection of [xxx] type.#otherinjections 
 
-You may be heard of different kinds of injections - "blind", "time-delay","second order" and thousands others. One have to understand that all these aren't different ways to *perform* an injection, but just different ways to *exploit* it. While there is only one way to perform an injection - to break query integrity. So, if you can keep query integrity, you'll be safe against all thousands of different "kinds" of injections all at once. And to keep the query integrity you have just to format query literals properly.
+You may be heard of different kinds of injections - "blind", "time-delay","second order" and thousands of others. One has to understand that all these aren't different ways to *perform* an injection, but just different ways to *exploit* it. While there is only one way to perform an injection - to break query integrity. So, if you can keep query integrity, you'll be safe against all thousands of different "kinds" of injections all at once. And to keep the query integrity you have just to format query literals properly.
 <a name="app3">&nbsp;</a>
 ###Appendix 3. False measures and bad practices.#badpractices
 
 1. [**Escaping user Input.**](https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet#Defense_Option_3:_Escaping_All_User_Supplied_Input) This is a King. A grave delusion, still shared by almost every PHP user (and even OWASP, as you can see).  Consists of two parts: "escaping" and "user input":
 
  - escaping: as we noted above, it does only *part* of the job, for only *one* literal type. And when used alone or not in the proper place is a sure call for disaster.
- - user input: there should be no such words in the context of injection protection. Every variable is potentially dangerous - no matter of the source! Or, in other words - every variable have to be properly formatted to be put into query - no matter of the source again. It's destination that matters. The moment a developer starts to separate the sheep from the goats, he does his first step to disaster.
+ - user input: there should be no such words in the context of injection protection. Every variable is potentially dangerous - no matter of the source! Or, in other words - every variable have to be properly formatted to be put into query - no matter the source again. It's the destination that matters. The moment a developer starts to separate the sheep from the goats, he does his first step to disaster.
  - moreover, even the wording suggests bulk escaping at the entry point, resembling the very `magic quotes` feature - already despised, deprecated and removed.
 
 2. **magic quotes** - the very material incarnation of the above principle. Thank goodness, it's already removed from the language. I would not even add this item to the list if such a suggestion weren't posted as an answer to this very question recently.
 
-3. **data validation**. One have to understand, that input (in the meaning of user input) data validation has absolutely nothing to do with SQL. Really. No validation rule can help against SQL injection if a free-form text is allowed. Yet we have to format our SQL despite of any validation anyway - remember Sarah O'Hara who bears a name which is perfectly valid from the user input point of view. Also remember that **validation rules may change**.
+3. **data validation**. One have to understand, that input (in the meaning of user input) data validation has absolutely nothing to do with SQL. Really. No validation rule can help against SQL injection if a free-form text is allowed. Yet we have to format our SQL despite any validation anyway - remember Sarah O'Hara who bears a name which is perfectly valid from the user input point of view. Also, remember that **validation rules may change**.
 
 4. **htmlspecialchars** (and also `filter_var()`, `strip_tags()` and the like).   
-Folks. It's **HTML** encoding, if you didn't notice yet. It has absolutely nothing to do with **SQL.** It helps nothing in the matter, and should never be used in context of SQL injection protection. It's absolutely inapplicable for SQL, and  cannot protect your query even if used as a string escaping function. Leave it for other parts of your application.    
-Also, please understand, that SQL formatting should never ever touch the data. Then you put your jewelery in a safe, you want it back **intact**, not some parts amended or replaced "for your own safety!". Same here. A database is intended to store your data, not to "protect" it. And it is essential to store the exact data you want back (means your silly `base64` attempt is wrong as well, by the way). 
+Folks. It's **HTML** encoding if you didn't notice yet. It has absolutely nothing to do with **SQL.** It helps nothing in the matter, and should never be used in the context of SQL injection protection. It's absolutely inapplicable for SQL, and cannot protect your query even if used as a string escaping function. Leave it for other parts of your application.    
+Also, please understand, that SQL formatting should never ever touch the data. Then you put your jewelry in a safe, you want it back **intact**, not some parts amended or replaced "for your own safety!". Same here. A database is intended to store your data, not to "protect" it. And it is essential to store the exact data you want back (means your silly `base64` attempt is wrong as well, by the way). 
 
-5. **Universal** "clean'em all" **sanitization functon.**     
-Such a function just should have never exists. Beside the fact that each context we are going to use our data in (SQL query, HTML code, JS code, JSON string, etc. etc. etc.) require different formatting, there are even distinct sub-types of data literals in all these mediums - each require it's own formatting too. Which makes it's just impossible to create a single all-embracing function to format 'em all in once, without spoiling the source data yet leaving huge security holes at the same time.
+5. **Universal** "clean'em all" **sanitization function.**     
+Such a function just should have never existed. Besides the fact that each context we are going to use our data in (SQL query, HTML code, JS code, JSON string, etc. etc. etc.) requires different formatting, there are even distinct sub-types of data literals in all these mediums - each requires it's own formatting too. Which makes it's just impossible to create a single all-embracing function to format 'em all in once, without spoiling the source data yet leaving huge security holes at the same time.
 
 6. **Filtering out malicious characters and sentences.**     
-This one is simple - it's absolutely imaginary measure. It fails reality check a big one. Nobody ever used it on a more-or-less viable site. Just because it will spoil user experience. 
+This one is simple - it's absolutely imaginary measure. It fails the reality check a big one. Nobody ever used it on a more-or-less viable site. Just because it will spoil user experience. 
 
 7. **Stored procedures.**   
-NOT in web-development. this suggestion is from another realm, where one would have fancy of limiting database users to a set of stored procedures. It is more like general security measure, pointed against local users, rather than against an intruder. Anyway the approach is just inviable in the web-development. It can add nothing to what prepared statements already offer, yet in a way inconvenient and toilsome way. 
+NOT in web-development. this suggestion is from another realm, where one would have a fancy of limiting database users to a set of stored procedures. It is more like a general security measure, pointed against local users, rather than against an intruder. Anyway, the approach is just inviable in the web development. It can add nothing to what prepared statements already offer, yet in a way inconvenient and toilsome way. 
 
-8. **Separate DB accounts** for running SELECT and DML queries. Again not a protection measure, but a just a [worthless] attempt to soften the consequences of already preformed attack. Worthless because SELECT-based injection as a disaster alone. And of course useless because we are protected already by formatting our queries properly.
+8. **Separate DB accounts** for running SELECT and DML queries. Again not a protection measure, but a just a [worthless] attempt to soften the consequences of the already performed attack. Worthless because of SELECT-based injection as a disaster alone. And of course useless because we are protected already by formatting our queries properly.
 <a name="app4">&nbsp;</a>
 ###Appendix 4. ORMs and Query Builders.#orms
 
-Although this article is on the raw SQL queries only, in the modern applications you may find not a trace of them. Because all SQL is hidden behind the scenes by an ORM or a Query Builder. If your application is of the such kind - you're lucky. However, it doesn't make this article less significant due to following reasons:
+Although this article is on the raw SQL queries only, in the modern applications you may find not a trace of them. Because all SQL is hidden behind the scenes by an ORM or a Query Builder. If your application is of such kind - you're lucky. However, it doesn't make this article less significant due to the following reasons:
 
  - First of all, even ORMs and Query Builders have to be written by someone. And prepared statements will make such writing simpler and safer.  
  - Speaking of ORM, as long as you can stick to its methods, you're all right. Unfortunately, in the real life you can't use it all the way - sometimes you have to run raw queries as well. So, always have a good library that supports type-hinted placeholders along with your ORM.    
