@@ -1,19 +1,19 @@
-*Disclaimer: My English is far from perfect and this text has been written when it was even worse. If you can't stand such a bad grammar and can afford a bit of proofreading, [here is the source on Github](https://github.com/colshrapnel/phpdelusions.net/blob/master/sql_injection.md), all pull requests to which will be accepted with gratitude.*
+*Disclaimer: My English is far from perfect and this text has been written when it was even worse. If you can't stand such poor grammar and can afford to do a bit of proofreading, [here is the source on Github](https://github.com/colshrapnel/phpdelusions.net/blob/master/sql_injection.md), all pull requests to which will be accepted with gratitude.*
 
-In this article I will try to explain the nature of SQL injection; show how to make your queries 100% safe; and disclose numerous delusions, superstitions and bad practices related to the topic of the SQL Injection prevention.
+In this article I will try to explain the nature of SQL injection; show how to make your queries 100% safe; and dispel numerous delusions, superstitions and bad practices related to the topic of SQL Injection prevention.
 
 ###Don't panic.#dontpanic
 
-Honestly, there is not a single reason to panic or to be even worried. All you need is to get rid of some old superstitions and learn a couple simple rules. And all your queries will be always sound and safe. Strictly speaking, you don't even need to protect from SQL injections at all. Means no dedicated measure, intended exclusively to protect from SQL injection, have to be taken. All you need is **to format your query** properly. As simple as that. Don't you believe me? Please follow the explanation.
+Honestly, there is not a single reason to panic or to be even worried. All you need is to get rid of some old superstitions and learn a few simple rules to make all your queries safe and sound. Strictly speaking, you don't even need to protect from SQL injections at all! That is, no dedicated measures intended exclusively to protect from SQL injection, have to be taken. All you need is to **format your query** properly. It’s as simple as that. Don't believe me? Please read on.
 
-###What an SQL injection is?#whatis
+###What is an SQL injection?#whatis
 
 SQL Injection is an exploit of an improperly formatted SQL query.
 
-The root of SQL injection is the mixing of the code and the data.     
-In fact, an SQL query is *a program.* A fully legitimate program - just like our familiar PHP scripts. And so it happens that we are *creating this program dynamically,* adding some data to this program on the fly. Naturally, this data may interfere with the program code and even alter it - and such alteration would be the very SQL injection itself. 
+The root of SQL injection is the mixing of code and data.     
+In fact, an SQL query is *a program.* A fully legitimate program - just like our familiar PHP scripts. And so it happens that we are *creating this program dynamically,* adding data to this program on the fly. Naturally, this data may interfere with the program code and even alter it - and such an alteration would be the very SQL injection itself.
 
-But such thing can only happen if we don't format query parts properly. Let's take a look at a [canonical example](http://xkcd.com/327/),
+But such a thing can only happen if we don't format query parts properly. Let's take a look at a [canonical example](http://xkcd.com/327/),
 
     $name  = "Bobby';DROP TABLE users; -- ";
     $query = "SELECT * FROM users WHERE name='$name'";
@@ -22,12 +22,12 @@ which compiles into the malicious sequence
 
     SELECT * FROM users WHERE name='Bobby';DROP TABLE users; -- '
 
-Call it an injection? Wrong. It's **an improperly formatted string literal.**    
-Which, being properly formatted, won't harm anyone:
+Call it an injection? Wrong. It's **an improperly formatted string literal.**  
+Which, once properly formatted, won't harm anyone:
 
     SELECT * FROM users WHERE name='Bobby\';DROP TABLE users; -- '
 
-Lets take another canonical example,
+Let's take another canonical example,
 
     $id    = "1; DROP TABLE users;"
     $id    = mysqli_real_escape_string($link, $id);
@@ -37,25 +37,25 @@ with no less harmful result:
 
     SELECT * FROM users WHERE id =1;DROP TABLE users; -- '
 
-Call it injection again? Yet again wrong. It's **an improperly formatted numeric literal.** Be it properly formatted, an honest 
+Call it an injection again? Wrong yet again. It's **an improperly formatted numeric literal.** Be it properly formatted, an honest
 
     SELECT * FROM users where id = 1
 
 statement would be positively harmless.
 
-But the point is, **we need to format out queries anyway** - no matter if there is any danger or not. Say, there is no Bobby Tables happened around but an honest girl named `Sarah O'Hara` - who would never get into a class if we won't format our query, simply because 
+But the point is, **we need to format out queries anyway** - no matter if there is any danger or not. Say there was no Bobby Tables around, but an honest girl named `Sarah O'Hara` - who would never get into a class if we don’t format our query, simply because the statement
 
     INSERT INTO users SET name='Sarah O'Hara'
 
-statement will cause a mere syntax error. 
+will cause an ordinary syntax error.
 
 > So we have to format just for sake of it. Not for Bobby but for Sarah. That is the point.
 
-While SQL injection is just a *consequence* of the improperly formatted query.
+While SQL injection is just a *consequence* of an improperly formatted query.
 
-> Moreover, **all the danger is coming from the very statement of question:** zounds of PHP users still do believe that a notorious `mysqli_real_escape_string()` function's the only purpose is "to protect SQL from injections" (by means of escaping some fictional "dangerous characters"). If only they knew the real purpose of this honest function, there would be no injections in the world! If only they were *formatting* their queries properly, instead of "protecting" them - they'd have a real protection as a result.
+> Moreover, **all the danger is coming from the very statement in question:** zounds of PHP users still do believe that the notorious `mysqli_real_escape_string()` function's only purpose is "to protect SQL from injections" (by means of escaping some fictional "dangerous characters"). If only they knew the real purpose of this honest function, there would be no injections in the world! If only they were *formatting* their queries properly, instead of "protecting" them - they'd have real protection as a result.
 
-So, to make our queries invulnerable, we need to format them properly and make such formatting **obligatory**. Not as just an occasional treatment occurred at random, as it often happens, but as a strict, inviolable rule. And your queries will be perfectly safe just as a *side effect*. 
+So, to make our queries invulnerable, we need to format them properly and make such formatting **obligatory**. Not as just an occasional treatment at random, as it often happens, but as a strict, inviolable rule. And your queries will be perfectly safe just as a *side effect*.
 
 ###What are the formatting rules?#formatting
 
