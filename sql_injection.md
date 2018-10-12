@@ -1,17 +1,17 @@
 *Disclaimer: My English is far from perfect and this text has been written when it was even worse. If you can't stand poor grammar and can afford to do a bit of proofreading, [here is the source on Github](https://github.com/colshrapnel/phpdelusions.net/blob/master/sql_injection.md). All pull requests will be accepted with gratitude.*
 
-In this article I will try to explain the nature of SQL injection; show how to make your queries 100% safe; and dispel numerous delusions, superstitions and bad practices related to the topic of SQL Injection prevention.
+In this article I will explain: the nature of SQL injection, how to make your queries 100% safe, numerous delusions/superstitions, and bad practices related to SQL Injection prevention.
 
 ###Don't panic.#dontpanic
 
-Honestly, there is not a single reason to panic or to be even worried. All you need is to get rid of some old superstitions and learn a few simple rules to make all your queries safe and sound. Strictly speaking, you don't even need to protect from SQL injections at all! That is, no dedicated measures intended exclusively to protect from SQL injection, have to be taken. All you need is to **format your query** properly. It’s as simple as that. Don't believe me? Please read on.
+Honestly, there is no reason to panic or be worried. All you need to do is get rid of some old superstitions and learn a few simple rules to make your queries safe and sound. Strictly speaking, you don't even need to protect from SQL injections at all! That is, there are no dedicated measures intended exclusively to protect from SQL injection, that have to be taken. All you need is to **format your query** properly. It’s as simple as that. Don't believe me? Please read on.
 
-###What is an SQL injection?#whatis
+###What is a SQL injection?#whatis
 
-SQL Injection is an exploit of an improperly formatted SQL query.
+SQL Injection is the exploit of an improperly formatted SQL query.
 
 The root of SQL injection is the mixing of code and data.
-In fact, an SQL query is *a program.* A fully legitimate program - just like our familiar PHP scripts. And so it happens that we are *creating this program dynamically,* adding data to this program on the fly. Naturally, this data may interfere with the program code and even alter it - and such an alteration would be the very SQL injection itself.
+In fact, a SQL query is *a program.* A fully legitimate program - just like our familiar PHP scripts. And so it happens that we *create this program dynamically,* adding data on the fly. Naturally, this data may interfere with the program code and even alter it - and such an alteration would be the very SQL injection itself.
 
 But such a thing can only happen if we don't format query parts properly. Let's take a look at a [canonical example](http://xkcd.com/327/),
 
@@ -22,12 +22,12 @@ which compiles into the malicious sequence
 
     SELECT * FROM users WHERE name='Bobby';DROP TABLE users; -- '
 
-Call it an injection? Wrong. It's **an improperly formatted string literal.**
+Should we call it an injection? Wrong. It's **an improperly formatted string literal.**
 Which, once properly formatted, won't harm anyone:
 
     SELECT * FROM users WHERE name='Bobby\';DROP TABLE users; -- '
 
-Let's take another canonical example,
+Let's look at another canonical example,
 
     $id    = "1; DROP TABLE users;"
     $id    = mysqli_real_escape_string($link, $id);
@@ -37,7 +37,7 @@ with no less harmful result:
 
     SELECT * FROM users WHERE id =1;DROP TABLE users; -- '
 
-Call it an injection again? Wrong yet again. It's **an improperly formatted numeric literal.** Be it properly formatted, an honest
+Should we call it an injection again? Wrong yet again. It's **an improperly formatted numeric literal.** If it were properly formatted, an honest
 
     SELECT * FROM users where id = 1
 
