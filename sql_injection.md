@@ -53,13 +53,13 @@ will cause an ordinary syntax error.
 
 SQL injection is just a *consequence* of an improperly formatted query.
 
-> Moreover, **all the danger is coming from the very statement in question:** zounds of PHP users still do believe that the notorious `mysqli_real_escape_string()` function's only purpose is "to protect SQL from injections" (by means of escaping some fictional "dangerous characters"). If only they knew the real purpose of this honest function, there would be no injections in the world! If only they were *formatting* their queries properly, instead of "protecting" them - they'd have real protection as a result.
+> Moreover, **all the danger is coming from the very statement in question:** thousands of PHP users still believe that the notorious `mysqli_real_escape_string()` function's only purpose is "to protect SQL from injections" (by means of escaping some fictional "dangerous characters"). If they only knew the real purpose of this honest function, then there would be no injections in the world! If only they were *formatting* their queries properly, instead of "protecting" them - they'd have real protection as a result.
 
-So, to make our queries invulnerable, we need to format them properly and make such formatting **obligatory**. Not as just an occasional treatment at random, as it often happens, but as a strict, inviolable rule. And your queries will be perfectly safe just as a *side effect*.
+So, to make our queries invulnerable, we need to format them properly and make such formatting **obligatory**. Not as just an occasional treatment at random, as it often happens, but as a strict, inviolable rule. Then your queries will be perfectly safe just as a *side effect*.
 
 ###What are the formatting rules?#formatting
 
-The truth is, formatting rules are not that easy and cannot be expressed in a single imperative. This is the most interesting part, because, in the mind of the average PHP user, SQL query is something homogeneous, something as solid as a PHP string literal that represents it. They [treat SQL as a solid medium](http://kunststube.net/encoding/), that require whatever all-embracing "SQL escaping" only. While in fact SQL query a *program*, just like a PHP script. A program with its distinct syntax for its distinct parts, and **each part require distinct formatting, inapplicable for the others!**
+The truth is, formatting rules are not that easy and cannot be expressed in a single imperative. The most interesting part is that because most average PHP users, see SQL queries as homogeneous, something as solid as the PHP string literals that represents them. They [treat SQL as a solid medium](http://kunststube.net/encoding/), that requires an all-embracing "SQL escaping" only. While in fact, SQL queries are *programs*, just like a PHP script. A program with its distinct syntax for its distinct parts, and **each part requires distinct formatting, inapplicable to others!**
 
 For Mysql it would be:
 
@@ -83,7 +83,7 @@ or
 
 As you can see, there are *four* whole *sets* of rules, not just one single statement. So, one cannot stick to a magic chant like "escape your inputs" or "use prepared statements".
 
-"All right" - you would say - "I am following all these rules already. What's all the fuss is about"? All the fuss is about the *manual* formatting. In fact, you should never apply these rules manually, in the application code, but must have a mechanism that will do this formatting for you instead. Why?
+"All right" - you would say - "I am following all these rules already. What's all the fuss about"? All the fuss is about *manual* formatting. In fact, you should never apply these rules manually, in application code, but must have a mechanism that will do formatting for you instead. Why?
 
 ###Why manual formatting is bad?#manual
 
