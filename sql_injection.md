@@ -43,15 +43,15 @@ Should we call it an injection again? Wrong yet again. It's **an improperly form
 
 statement would be positively harmless.
 
-But the point is, **we need to format out queries anyway** - no matter if there is any danger or not. Say there was no Bobby Tables around, but an honest girl named `Sarah O'Hara` - who would never get into a class if we don’t format our query, simply because the statement
+But the point is, **we need to format our queries anyway** - whether there is any danger or not. For example, an honest girl named `Sarah O'Hara` - could never be added to a Bobby table because we didn't format our query, and the statement
 
     INSERT INTO users SET name='Sarah O'Hara'
 
 will cause an ordinary syntax error.
 
-> So we have to format just for sake of it. Not for Bobby but for Sarah. That is the point.
+> So we have to format our queries. Not for Bobby but for Sarah. That is the point.
 
-While SQL injection is just a *consequence* of an improperly formatted query.
+SQL injection is just a *consequence* of an improperly formatted query.
 
 > Moreover, **all the danger is coming from the very statement in question:** zounds of PHP users still do believe that the notorious `mysqli_real_escape_string()` function's only purpose is "to protect SQL from injections" (by means of escaping some fictional "dangerous characters"). If only they knew the real purpose of this honest function, there would be no injections in the world! If only they were *formatting* their queries properly, instead of "protecting" them - they'd have real protection as a result.
 
