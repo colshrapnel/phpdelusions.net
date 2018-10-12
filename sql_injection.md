@@ -116,14 +116,14 @@ All right, now you trust me that manual formatting is bad. What do we have to us
 
 Here I need to stop for a while to emphasize the important difference between the implementation of **native** prepared statements supported by the major DBMS and **the general idea of using a placeholder** to represent the actual data in the query. And to emphasize **real benefits** of a prepared statement.
 
-The idea of a native prepared statement is smart and simple: the query and the data are sent to the server separated from each other, and thus there is no chance for them to interfere. Which makes SQL injection outright impossible. But at the same time, native implementation has its limitations, as it supports only two kinds of literals (strings and numbers, namely) which **renders them insufficient and insecure for the real-life usage.**
+The idea of a native prepared statement is smart and simple: the query and data are both sent to the server separated from each other, and thus there is no chance for them to interfere. Which makes SQL injection outright impossible. But at the same time, native implementation has its limitations, as it supports only two kinds of literals (strings and numbers, namely) which **renders them insufficient and insecure for real-life usage.**
 
 There are also some wrong statements about native prepared statements:
 
 - they are "faster". **Not in PHP**, which simply won't let you reuse a prepared statement between separate calls. While repeated queries within the same instance occurred too seldom to talk about.
-- they are "safer". This is partially true, but not because they are *native*, but because they are *prepared statements* - as opposed to manual formatting.
+- they are "safer". This is partially true, but not because they are *native*, but because they are *prepared statements* - as opposed to manually formatted.
 
-And here we came to the main point of the whole article: the general idea of creating an SQL query out of constant part and placeholders, which will be substituted with actual data, which will be **automatically formatted** is indeed a Holy Grail we were looking for.
+And here we came to the main point of the whole article: the general idea of creating a SQL query out of constant part and placeholders, which will be substituted with actual data, which will be **automatically formatted** is indeed a Holy Grail we were looking for.
 
 The main and most essential benefit of prepared statements is the elimination of all the dangers of manual formatting:
 
@@ -132,16 +132,16 @@ The main and most essential benefit of prepared statements is the elimination of
 - a prepared statement makes the formatting inviolable!
 - a prepared statement does the formatting in the only proper place - right before query execution.
 
-This is why manual formatting is so much despised nowadays and prepared statements are so honored.
+This is why manual formatting is despised nowadays and prepared statements are so honored.
 
 There are two additional but non-essential benefits of using prepared statements:
 
 - a prepared statement doesn't spoil the source data which can be used safely somewhere else: shown back in the browser, stored in a cookie, etc.
-- a programmer who is lazy enough can make their code dramatically shorter by means of using prepared statements (however, the opposite is true too - a diligent user can write a code for the simple insert of the size of an average novel).
+- a programmer who is lazy enough can make their code dramatically shorter by means of using prepared statements (however, the opposite is true too - a diligent user can write code for the simple insert the size of an average novel).
 
-So, "nativeness" of a prepared statement is not that essential, as it proven by PDO, which can just *emulate* a prepared statement, sending the regular query to the server at once, substituting placeholders with the actual data, if `PDO::ATTR_EMULATE_PREPARES` [configuration variable](http://php.net/manual/en/pdo.setattribute.php) is set to `TRUE`. But the data gets **properly formatted** in this case - and therefore this approach is equally safe!
+So, the "nativeness" of a prepared statement is not that essential, as it is proven by PDO, which can just *emulate* a prepared statement, sending the regular query to the server at once, substituting placeholders with the actual data, if `PDO::ATTR_EMULATE_PREPARES` [configuration variable](http://php.net/manual/en/pdo.setattribute.php) is set to `TRUE`. But the data gets **properly formatted** in this case - and therefore this approach is equally safe!
 
-Moreover, **even with the old MySQL extension** we can use prepared statements all right! Here is a small function that can offer rock-solid security with this old good extension:
+Moreover, **even with the old MySQL extension** we can use prepared statements all right! Here is a small function that can offer rock-solid security with this good old extension:
 
     function paraQuery()
     {
@@ -170,9 +170,9 @@ Look - everything is parameterized and safe, at least to the degree PDO can offe
 
 So the all-embracing rule for the protection:
 
-####Every dynamical element should go into query via **placeholder**
+####Every dynamic element should go into query via **placeholder**
 
-> Here I need to stop again to make a very important statement: we need to distinguish a **constant** query element from a **dynamical** one. Obviously, our primary concern has to be dynamical parts, just because of their very dynamic nature. While constant value cannot be spoiled by design, and whatever formatting issue can be fixed at development phase, dynamical query element is a distinct matter. Due to its variable nature, **we never can tell if it contains a valid value, or not.** This is why it is so important to use placeholders for all the dynamical query parts.
+> Here I need to stop again to make a very important statement: we need to distinguish a **constant** query element from a **dynamic** one. Obviously, our primary concern has to be dynamic parts, just because of their very dynamic nature. While constant values cannot be spoiled by design, and whatever formatting issue can be fixed in the development phase, a dynamic query element is a distinct matter. Due to its variable nature, **we never can tell if it contains a valid value, or not.** This is why it is so important to use placeholders for all the dynamic query parts.
 
 "All right" - says you - "I am using prepared statements all the way already. And so what?" Be honest - you aren't.
 <a name="6">&nbsp;</a>
