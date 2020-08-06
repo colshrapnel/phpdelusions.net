@@ -348,7 +348,7 @@ You may be heard of different kinds of injections - "blind", "time-delay","secon
 
 2. **magic quotes** - the very material incarnation of the above principle. Thank goodness, it's already removed from the language. 
 
-3. **data validation**. One have to understand, that input (in the meaning of user input) data validation has absolutely nothing to do with SQL. Really. No validation rule can help against SQL injection if a free-form text is allowed. Yet we have to format our SQL despite any validations anyway - remember Sarah O'Hara who bears a name which is perfectly valid from the user input point of view. Also, remember that **validation rules may change**.
+3. **data validation**. One has to understand, that input (in the meaning of user input) data validation has absolutely nothing to do with SQL. Really. No validation rule can help against SQL injection if a free-form text is allowed. Yet we have to format our SQL despite any validations anyway - remember Sarah O'Hara who bears a name which is perfectly valid from the user input point of view. Also, remember that **validation rules may change**.
 
 4. **htmlspecialchars** (and also `filter_var()`, `strip_tags()` and the like).   
 Folks. It's **HTML** special characters encoding if you didn't notice yet. It has absolutely nothing to do with **SQL.** It helps nothing in the matter, and should never be used in the context of SQL injection protection. It's absolutely inapplicable for SQL, and cannot protect your query even if used as a string escaping function. Leave it for other parts of your application.    
