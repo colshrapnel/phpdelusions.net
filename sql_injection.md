@@ -1,10 +1,10 @@
 *Disclaimer: My English is far from perfect and this text has been written when it was even worse. If you can't stand such poor grammar and can afford to do a bit of proofreading, [here is the source on Github](https://github.com/colshrapnel/phpdelusions.net/blob/master/sql_injection.md), all pull requests to which will be accepted with gratitude.*
 
-In this article I will try to explain the nature of SQL injection; show how to make your queries 100% safe; and dispel numerous delusions, superstitions and bad practices related to the topic of SQL Injection prevention.
+In this article, I will try to explain the nature of SQL injection; show how to make your queries 100% safe; and dispel numerous delusions, superstitions and bad practices related to the topic of SQL Injection prevention.
 
 ###Don't panic.#dontpanic
 
-Honestly, there is not a single reason to panic or to be even worried. All you need is to get rid of some old superstitions and learn a few simple rules to make all your queries safe and sound. Strictly speaking, you don't even need to protect from SQL injections at all! That is, no dedicated measures intended exclusively to protect from SQL injection, have to be taken. All you need is to **format your query** properly. It’s as simple as that. Don't believe me? Please read on.
+Honestly, there is not a single reason to panic or to be even worried. All you need is to get rid of some old superstitions and learn a few simple rules to make all your queries safe and sound. Strictly speaking, you don't even need to protect from SQL injections at all! That is, no dedicated measures intended exclusively to protect from SQL injection have to be taken. All you need is to **format your query** properly. It’s as simple as that. Don't believe me? Please read on.
 
 ###What is an SQL injection?#whatis
 
@@ -43,13 +43,13 @@ Call it an injection again? Wrong yet again. It's **an improperly formatted nume
 
 statement would be positively harmless.
 
-But the point is, **we need to format out queries anyway** - no matter if there is any danger or not. Say there was no Bobby Tables around, but an honest girl named `Sarah O'Hara` - who would never get into a class if we don’t format our query, simply because the statement
+But the point is, **we need to format out queries anyway** - no matter whether there is any danger or not. Say there was no Bobby Tables around, but an honest girl named `Sarah O'Hara` - who would never get into a class if we don’t format our query, simply because the statement
 
     INSERT INTO users SET name='Sarah O'Hara'
 
 will cause an ordinary syntax error.
 
-> So we have to format just for sake of it. Not for Bobby but for Sarah. That is the point.
+> So we have to format just for sake of it. Not for Bobby, but for Sarah. That is the point.
 
 While SQL injection is just a *consequence* of an improperly formatted query.
 
@@ -59,9 +59,9 @@ So, to make our queries invulnerable, we need to format them properly and make s
 
 ###What are the formatting rules?#formatting
 
-The truth is, formatting rules are not that easy and cannot be expressed in a single imperative. This is the most interesting part, because, in the mind of the average PHP user, SQL query is something homogeneous, something as solid as a PHP string literal that represents it. They [treat SQL as a solid medium](http://kunststube.net/encoding/), that require whatever all-embracing "SQL escaping" only. While in fact SQL query a *program*, just like a PHP script. A program with its distinct syntax for its distinct parts, and **each part require distinct formatting, inapplicable for the others!**
+The truth is, formatting rules are not that easy and cannot be expressed in a single imperative. This is the most interesting part, because, in the mind of the average PHP user, SQL query is something homogeneous, something as solid as a PHP string literal that represents it. They [treat SQL as a solid medium](http://kunststube.net/encoding/), that require whatever all-embracing "SQL escaping" only. While in fact SQL query a *program*, just like a PHP script. A program with its distinct syntax for its distinct parts, and **each part requires distinct formatting, inapplicable for the others!**
 
-For Mysql it would be:
+For MySQL it would be:
 
 1. Strings
  * have to be added via a native prepared statement     
@@ -375,8 +375,8 @@ Although this article is on the raw SQL queries only, in the modern applications
 
 ###TL;DR#tldr
 
-1. There is no such thing like injection but improperly formatted query only
+1. There is no such thing as injection, but only an improperly formatted query
 2. To make formatting inviolable we have to use prepared statements
-3. Prepared statements have to support much more data types than simple strings and numbers
+3. Prepared statements have to support many more data types than simple strings and numbers
 4. To make formatting usable we need to use type-hinted placeholders
-5. In case when formatting is inapplicable, white-listing have to be used. 
+5. In case formatting is inapplicable, white-listing has to be used. 
