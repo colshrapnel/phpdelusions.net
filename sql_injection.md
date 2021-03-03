@@ -59,7 +59,7 @@ So, to make our queries invulnerable, we need to format them properly and make s
 
 ###What are the formatting rules?#formatting
 
-The truth is, formatting rules are not that easy and cannot be expressed in a single imperative. This is the most interesting part, because, in the mind of the average PHP user, SQL query is something homogeneous, something as solid as a PHP string literal that represents it. They [treat SQL as a solid medium](http://kunststube.net/encoding/), that require whatever all-embracing "SQL escaping" only. While in fact SQL query a *program*, just like a PHP script. A program with its distinct syntax for its distinct parts, and **each part requires distinct formatting, inapplicable for the others!**
+The truth is, formatting rules are not that easy and cannot be expressed in a single imperative. This is the most interesting part, because, in the mind of the average PHP user, an SQL query is something homogeneous, something as solid as a PHP string literal that represents it. They [treat SQL as a solid medium](http://kunststube.net/encoding/), that require whatever all-embracing "SQL escaping" only. While in fact an SQL query is a *program*, just like a PHP script. A program with its distinct syntax, and **each part requires distinct formatting, inapplicable for the others!**
 
 For MySQL it would be:
 
@@ -355,7 +355,7 @@ Folks. It's **HTML** special characters encoding if you didn't notice yet. It ha
 Also, please understand that SQL formatting should never ever alter the data. Then you put your jewelry in a safe, you want it back **intact**, not some parts amended or replaced "for your own safety!". Same here. A database is intended to store your data, not to "protect" it. And it is essential to store the exact data you want back (means your silly `base64` attempt is wrong as well, by the way). 
 
 5. **Universal** "clean'em all" **sanitization function.**     
-Such a function just should have never existed. First, there are too much different contexts/mediums our data could be used in (SQL query, HTML code, JS code, JSON string, etc. etc. etc.) each require different formatting. So you just cannot tell beforehand what kind of formatting/sanitization will be required. Moreover, there are different literals even in a single medium, which, in turn, require it's own formatting too. Which just makes it impossible to create a single all-embracing function to format 'em all at once, without the risk of spoiling the source data yet leaving huge security holes at the same time.
+Such a function just should have never existed. First, there are too much different contexts/mediums our data could be used in (an SQL query, HTML code, JS code, JSON string, etc. etc. etc.) each require different formatting. So you just cannot tell beforehand what kind of formatting/sanitization will be required. Moreover, there are different literals even in a single medium, which, in turn, require it's own formatting too. Which just makes it impossible to create a single all-embracing function to format 'em all at once, without the risk of spoiling the source data yet leaving huge security holes at the same time.
 
 6. **Filtering out malicious characters and sentences.**     
 This one is simple - it's an absolutely imaginary measure. It fails the reality check a big one. Nobody ever used it on a more-or-less viable site. Just because it will spoil the user experience. 
