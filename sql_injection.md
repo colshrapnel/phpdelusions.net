@@ -43,7 +43,7 @@ Call it an injection again? Wrong yet again. It's **an improperly formatted nume
 
 statement would be positively harmless.
 
-But the point is, **we need to format out queries anyway** - no matter whether there is any danger or not. Say there was no Bobby Tables around, but an honest girl named `Sarah O'Hara` - who would never get into a class if we don’t format our query, simply because the statement
+But the point is, **we need to format our queries anyway** - no matter whether there is any danger or not. Say there was no Bobby Tables around, but an honest girl named `Sarah O'Hara` - who would never get into a class if we don’t format our query, simply because the statement
 
     INSERT INTO users SET name='Sarah O'Hara'
 
@@ -53,13 +53,13 @@ will cause an ordinary syntax error.
 
 While SQL injection is just a *consequence* of an improperly formatted query.
 
-> Moreover, **all the danger is coming from the very statement in question:** zounds of PHP users still do believe that the notorious `mysqli_real_escape_string()` function's only purpose is "to protect SQL from injections" (by means of escaping some fictional "dangerous characters"). If only they knew the real purpose of this honest function, there would be no injections in the world! If only they were *formatting* their queries properly, instead of "protecting" them - they'd have real protection as a result.
+> Moreover, **all the danger is coming from the very statement in question:** thousands of PHP users still do believe that the notorious `mysqli_real_escape_string()` function's only purpose is "to protect SQL from injections" (by means of escaping some fictional "dangerous characters"). If only they knew the real purpose of this honest function, there would be no injections in the world! If only they were *formatting* their queries properly, instead of "protecting" them - they'd have real protection as a result.
 
 So, to make our queries invulnerable, we need to format them properly and make such formatting **obligatory**. Not as just an occasional treatment at random, as it often happens, but as a strict, inviolable rule. And your queries will be perfectly safe just as a *side effect*.
 
 ###What are the formatting rules?#formatting
 
-The truth is, formatting rules are not that easy and cannot be expressed in a single imperative. This is the most interesting part, because, in the mind of the average PHP user, an SQL query is something homogeneous, something as solid as a PHP string literal that represents it. They [treat SQL as a solid medium](http://kunststube.net/encoding/), that require whatever all-embracing "SQL escaping" only. While in fact an SQL query is a *program*, just like a PHP script. A program with its distinct syntax, and **each part requires distinct formatting, inapplicable for the others!**
+The truth is, formatting rules are not that easy and cannot be expressed in a single imperative. This is the most interesting part, because, in the mind of the average PHP user, an SQL query is something homogeneous, something as solid as a PHP string literal that represents it. They [treat SQL as a solid medium](http://kunststube.net/encoding/), that requires whatever all-embracing "SQL escaping" only. While in fact a SQL query is a *program*, just like a PHP script. A program with its distinct syntax, and **each part requires distinct formatting, inapplicable for the others!**
 
 For MySQL it would be:
 
@@ -83,7 +83,7 @@ or
 
 As you can see, there are *four* whole *sets* of rules, not just one single statement. So, one cannot stick to a magic chant like "escape your inputs" or "use prepared statements". 
 
-"All right" - you would say - "I am following all these rules already. What's all the fuss is about"? All the fuss is about the *manual* formatting. In fact, you should never apply these rules manually, in the application code, but must have a mechanism that will do this formatting for you instead. Why?
+"All right" - you would say - "I am following all these rules already. What's all the fuss about"? All the fuss is about the *manual* formatting. In fact, you should never apply these rules manually, in the application code, but must have a mechanism that will do this formatting for you instead. Why?
 
 ###Why manual formatting is bad?#manual
 
@@ -123,7 +123,7 @@ There are also some wrong statements about native prepared statements:
 - they are "faster". **Not in PHP**, which simply won't let you reuse a prepared statement between separate calls. While repeated queries within the same instance occurred too seldom to talk about. 
 - they are "safer". This is partially true, but not because they are *native*, but because they are *prepared statements* - as opposed to manual formatting.
 
-And here we came to the main point of the whole article: the general idea of creating an SQL query out of constant part and placeholders, which will be substituted with actual data, which will be **automatically formatted** is indeed a Holy Grail we were looking for.    
+And here we came to the main point of the whole article: the general idea of creating a SQL query out of constant part and placeholders, which will be substituted with actual data, which will be **automatically formatted** is indeed a Holy Grail we were looking for.    
 
 The main and most essential benefit of prepared statements is the elimination of all the dangers of manual formatting:
 
@@ -226,7 +226,7 @@ Quite a lot, in addition to existing types.
 <a name="7">&nbsp;</a>
 ###One little trick.#typehinted
 
-So far so good. But here we face another problem. Even with regular types sometimes we need to set data type explicitly, to let driver understand how to format this particular value. A classical example for PDO:
+So far so good. But here we face another problem. Even with regular types sometimes we need to set data type explicitly, to let the driver understand how to format this particular value. A classical example for PDO:
 
     $stm = $db->prepare('SELECT * FROM table LIMIT ?, ?');
     $stm->execute([1,2]);
@@ -250,7 +250,7 @@ Not quite a fresh idea, I have to admit. Well-known `printf()` function has been
 
 To solve all the problems, we need to extend a regular driver with simple *parser* which will parse a query with type-hinted placeholders, extract type information and use it to format a value.
 
-I am not the first to use this approach with DBAL either. There is [Dibi](http://dibiphp.com/),  [DBSimple](http://en.dklab.ru/lib/DbSimple/) or [NikiC's PDO wrapper](https://github.com/nikic/DB) and some other examples. But it seems to me that their authors underestimated the significance of type-tinted placeholder, taking it as some sort of syntax sugar, not as essential and cornerstone feature, which it has to be.
+I am not the first to use this approach with DBAL either. There is [Dibi](http://dibiphp.com/),  [DBSimple](http://en.dklab.ru/lib/DbSimple/) or [NikiC's PDO wrapper](https://github.com/nikic/DB) and some other examples. But it seems to me that their authors underestimated the significance of type-hinted placeholder, taking it as some sort of syntax sugar, not as essential and cornerstone feature, which it has to be.
 
 So, I endeavored my own implementation, to emphasize the idea, and called it [SafeMysql](https://github.com/colshrapnel/safemysql), because type-hinted placeholders make it indeed safer than the regular approach. It's also aimed for better usability, to make code cleaner and shorter.
 
