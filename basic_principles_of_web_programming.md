@@ -10,7 +10,7 @@ I only have to add that the following set of rules is the generic right way of d
 
 Although all language-specific details are given for PHP and MySQL, the principles are universal, and can be applied to any language.
 
-###Search engines
+### Search engines
 
 Learn to use Google. Seriously. There are loads of existing information on the web. All you need is to pick it up. Here are some useful hints:
 
@@ -19,7 +19,7 @@ Learn to use Google. Seriously. There are loads of existing information on the w
 - limit your search to the certain site, e.g. adding `site:stackoverflow.com` to your search phrase will limit the search to this site, or `site:reddit.com inurl:/r/php` to even a single subreddit!
 
 
-###Security
+### Security
 
 is the biggest shame of PHP tutorials. It is not a rare exception but rather a *rule* that a PHP tutorial picked at random from Google, or an Udemy course, would straight up teach you how to make your code critically vulnerable to every possible attack out there. And all this despite the fact that basic security rules are really simple and a no-brainer to follow! The good news, lately  *some* tutorials managed to make it right at least with basic security.
 
@@ -40,7 +40,7 @@ Also, a big problem with security recommendations is that they are either uncert
 
 All I have to add is that all those rules only work when followed **unconditionally**. One steps into abyss when starting to choose whether their data is "safe" or not, whether it must be protected or not. *Never judge the data by the source* but only by the *destination:* sending it to SQL? Then it must be prepared. Sending it into HTML? Then it must be encoded. And so on.
 
-###Error reporting
+### Error reporting
 
 is really a sore spot for the PHP community, endorsed - sadly - by none other than the official PHP manual and thousands of answers on Stack Overflow repeating the same bad practices again and again. Which makes even a smallest piece of code unnecessarily elaborate, unsuitable for the production and even potentially dangerous, leaking the sensitive information outside.
 
@@ -90,12 +90,11 @@ although such verifications look innocent or even the right thing to do, in prac
 
 A practical implementation of all the rules mentioned above can be found in the detailed article on the [PHP error reporting](https://phpdelusions.net/articles/error_reporting).
 
-###Debugging
+### Debugging
 
 The concept of debugging is almost universally unknown to PHP learners, probably because it's as universally ignored by tutorial authors, who have quite peculiar ideas on the debugging, if any. 
 
 At the same time, the concept of debugging is quite simple and natural. All you need to do is to *make your code talk to you*.
-
 
 I am speaking here not about some specific tooling but about the generic principle, the actual *idea* that an issue can be hunted down and fixed by some other method than just staring at the code or asking someone else to take a look. The idea that a problem code must be *run* instead of stared at, and made *talking* about its problems. 
 
@@ -142,13 +141,13 @@ in case the data is shown, then proceed to displaying it in the form. In case it
 
 This is just an example to show you the generic course of actions. Just apply this general principle to any problem situation and have any problem solved or at least have a certain question for a Q&A site. 
 
-###The workflow
+### The workflow
 
 - always do one thing at a time. Do not try to write the whole application at once. Split the application into distinct blocks (or pages) and each page into stages. Then finish them one by one, always verifying each stage's result. Got to write a CRUD? Then split it into distinct Create, Read, Update and Delete pages. Then each script into four stages: Reading the data from database, showing an HTML form, getting data from the form, storing data into the database
 - always realize what would be the result of your PHP code. Remember that your PHP doesn't render HTML. If some HTML created on the fly by your PHP code doesn't work as intended, don't blame PHP. Instead, write the desired HTML as is. Make sure it works. And only then turn to PHP, making it produce exactly the same HTML, comparing it with the reference code you wrote earlier.
   - the same for for SQL: writing a complex SQL query dynamically? Write the desired SQL first, make sure it works, then proceed to PHP code recreating exactly the same SQL, comparing it with the reference code you wrote earlier.
 
-###The application logic/display logic separation
+### The application logic/display logic separation
 
 Is a very important concept. Yet it can be achieved by very simple means, without implementing any fancy stuff such as MVC. All you need is to separate every script into two parts: a part where only PHP code is used and not a single character is sent to the client; and a part where all the output starts, with occasional PHP to organize the control flow. 
 
@@ -183,7 +182,7 @@ But that's really only for your first project. Learn to use a dedicated template
 - write the PHP code for the page
 - and once the code is done, just tell Twig to load the template for the page 
 
-###Absolute and relative paths
+### Absolute and relative paths
 
 A relatively (pun not intended) small issue but it leads to many confusions. 
 
@@ -213,13 +212,13 @@ the `/var/www/example.com` part is called the DOCUMENT_ROOT and can be found in 
 - also, a technically absolute filesystem path  but still relative to the current file can be built `__DIR__` constant,
  - `file_get_contents(__DIR__."/data.csv")`
 
-###Performance
+### Performance
 
 There are so many questions about performance asked out of the blue. But any concern about performance should be only provoked by the real life issue and backed by the results of *profiling *. Profiling, in simple terms, is measuring the execution times of distinct parts of the code and finding the slowest one, called a *bottleneck*. Only certain bottlenecks have to be fixed performance-wise, not just random parts of the code. Remember, "*[Premature optimization](https://wiki.c2.com/?PrematureOptimization) is the root of all evil*" 
 
 The only generic advise about performance that could be given is: "avoid processing the huge amounts of data". This applies mostly to the database interaction when a learner unknowingly can cause an avalanche, the most notable example is selecting all the rows from a database table *only to count them*.
 
-###The request-response cycle
+### The request-response cycle
 
 Some confusion is coming from the distributed nature of the server-browser system and the discrete nature of the PHP application. It is very important to understand that the execution of a PHP script is atomic:
 
@@ -228,7 +227,7 @@ Some confusion is coming from the distributed nature of the server-browser syste
 - when PHP blocks are intertwined with HTML blocks, it doesn't mean that PHP block gets executed on the server, then HTML block in the browser and so on. PHP executes entirely, and send the complete HTML to the browser. By the moment when a browser starts to render HTML, PHP program is likely already dead
 - understanding of the HTTP protocol is essential for a web-programmer. Here is a very clear but concise writeup, [HTTP Basics](https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html)
 
-###Encoding
+### Encoding
 
 Is simple - just use UTF-8. All you need is to configure it properly. This is going to be a gist of the great answer on Stack Overflow, [UTF-8 all the way through](https://stackoverflow.com/a/279279/285587). In short, you have to make sure that all parts of your application are talking to each other using UTF-8 encoding:
 
