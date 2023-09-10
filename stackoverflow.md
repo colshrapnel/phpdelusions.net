@@ -43,7 +43,7 @@ It simply outlaws *most newbie questions out there!* And if new questions still 
 
 Yet, people still come asking questions anyway, only to face with closures and downvotes. 
 
-And all this gruesome experience is to prevent [stupid questions](https://meta.stackoverflow.com/q/314372/285587) from getting in the way of the Noble goal, creation of that *library of high-quality answers*. And this situation is really getting out of hand, because too many people are starting to see Stack Overflow as an evil place.
+And all this gruesome experience is to prevent [stupid questions](https://meta.stackoverflow.com/q/314372/285587) from getting in the way of the Noble goal, creation of that *library of high-quality answers*. And this situation is really getting out of hand, because too many people are seeing Stack Overflow as an evil place, which even become [a meme](https://www.reddit.com/r/ProgrammerHumor/comments/u49a6j/sad_truth/).
 
 There is an old article, [The decline of Stack Overflow](https://johnslegers.medium.com/the-decline-of-stack-overflow-7cb69faa575d) (not to be confused with "The Fall..." mentioned below), with a long list of similar articles at the bottom, followed by a [heated discussion on Reddit](https://www.reddit.com/r/programming/comments/3cafkp/is_stack_overflow_overrun_by_trolls/), where people are using rather a strong language towards volunteers and moderators. And - as I feel it - unjustly. The whole community cannot be trolls. The problem is not the people, but the system: it's the very contradiction mentioned above that antagonizes people. And mods are not evil. They just follow the rules aimed at fulfilling the Noble purpose.
 
