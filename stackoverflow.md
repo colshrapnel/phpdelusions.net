@@ -9,9 +9,9 @@ But please, hear me out.
 
 ### The eternal controversy
 
-Stack Overflow was designed to help programmers two way: by answering questions asked explicitly, and by creating ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour), so people can instantly find an already existing answer to their question. It turned out that, if pursued simultaneously, these two goals are rather mutually exclusive, and, as a result, frantically step on each other's toes, greatly *worsening* the achievement of both. I call it the eternal controversy of Stack Overflow. 
+Stack Overflow was designed to help programmers two way: by answering questions asked explicitly, and by creating ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour) out of such questions, so people can instantly find an already existing solution for their problem. It turned out that, if pursued simultaneously, these two goals are rather controversial, and greatly impede the achievement of both. I call it the eternal controversy of Stack Overflow. 
 
-If you think of it, a good canonical question should be specicifally made, by making it precisely formulated, supplied with a good informative title, and stripped of all insignificant details. But people usually don't ask canonical questions. They just have a hot, "ad hoc" problem they need a solution for. After realizing that (and having accumulated a fair amount of questions), Stack Overflow has started to tighten the rules, asking people coming for help to ask only canonical questions. But it doesn't seem to work.
+If you think of it, a good canonical question should be specicifally made, by making it precisely and unambiguosly formulated, supplied with a good informative title, and stripped of all insignificant details. But people usually don't ask canonical questions. They just have a hot, "ad hoc" problem they need a solution for. After realizing that (and having accumulated a fair amount of questions), Stack Overflow has started to tighten the rules, asking people coming for help to ask only canonical questions. But it doesn't seem to work.
 
 Current regulations are so confused that it make users to clash in every direction:
 
