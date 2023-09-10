@@ -9,9 +9,9 @@ But please, hear me out.
 
 ### The eternal controversy
 
-Stack Overflow was designed to help programmers two way: by answering questions asked explicitly, and by creating ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour) out of such questions, so people can instantly find an already existing solution for their problem. It turned out that, if pursued simultaneously, these two goals are rather controversial, and greatly impede the achievement of both. I call it the eternal controversy of Stack Overflow. 
+Stack Overflow was designed to help programmers two way: by answering questions asked explicitly, and by creating ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour) out of such questions, so people can instantly find an already existing solution for their problem. It turned out that, if pursued simultaneously, these two goals are rather contradictory, and greatly impede the achievement of each other. I call it the eternal controversy of Stack Overflow. 
 
-If you think of it, a good canonical question should be specicifally made, by having it precisely and unambiguosly formulated, supplied with a good informative title, and stripped of all insignificant details. But people usually don't ask canonical questions. They just have a hot, "ad hoc" problem they need a solution for. After realizing that (and having accumulated a fair amount of questions), Stack Overflow has started to tighten the rules, asking people coming for help to ask only canonical questions. But it doesn't seem to work.
+If you think of it, a good canonical question should be specicifally shaped, by having it precisely and unambiguosly formulated, supplied with a good informative title, and stripped of all insignificant details. But people usually don't ask canonical questions. They just have a hot, "ad hoc" problem they need a solution for. After realizing that (and having accumulated a fair amount of questions), Stack Overflow has started to tighten the rules, asking people coming for help to ask only canonical questions. But it doesn't seem to work.
 
 Current regulations are so confused that it make users to clash in every direction:
 
@@ -68,7 +68,7 @@ The irony, it will be pretty much the same as the current approach (when low qua
 
 ### Fulfilling the Noble purpose
 
-Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still struggles to achieve its noble goal. Because it's same old answer to ad-hoc question that suddenly becomes canonical, because Google for some reason chose this particular question among others. But sich is a human nature, that people never write a canonical answer to ad-hoc question. Instead, the always cater to the present issue. Not to mention that competitive approacj, when a question gets hald a dozen different answers. Which could be good for ad-hoc questions, but turns into a great disservice when it comes to canonical answers. 
+Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still struggles to achieve its noble goal. Because it's the same old answer to ad-hoc question that suddenly became canonical, because Google for some reason chose this particular question among others. But such is a human nature, that people never write a canonical answer to ad-hoc question. Instead, the always cater to the OP and address their circumstances. Not to mention the competitive approach, when a question gets half a dozen different answers. Which could be good for ad-hoc questions, but turns into a great disservice when it comes to canonical answers. 
 
 Quite too often, instead of a "detailed high-quality answer", a user coming from search is faced with multiple similar questions, each crowded with a motley lot of assorted attempts to answer it. 
 Which makes finding a good answer rather a challenge:
@@ -111,4 +111,4 @@ Such a separation will solve many problems at once:
 
 ---
 
-I am strongly convinced that the idea is viable. But I am sure that overlooked many important issues, because it's hard to consider all edge cases from just a single point of view. Thet's why I am begging for your feedback. And I believe that Meta site of Stack Overflow is the right place for such a discussion. The only outcome with which I don't agree in advance is to leave evarything as is. Simply because it's a road to decline. And I am sure that in this case someone else will inevitably create a Q&A site, where anyone can ask a programming question without being reproached for having a problem of not that global calibre.
+I am strongly convinced that the idea is viable. But I am sure that overlooked many important issues, because it's hard to consider all edge cases from just a single point of view. That's why I hope for a discussion. And I believe that Meta site of Stack Overflow is the right place for such a discussion. The only outcome with which I don't agree in advance is to leave evarything as is. Simply because it's a road to decline. And I am sure that in this case someone else will inevitably create a Q&A site, where anyone can ask a programming question without being reproached for having a problem of not that global calibre.
