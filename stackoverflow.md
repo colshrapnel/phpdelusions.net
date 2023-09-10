@@ -111,4 +111,4 @@ Such a separation will solve many problems at once:
 
 ---
 
-Of course, this is not a complete plan, but rather an idea, many details has to be considered and well thought. But I am strongly convinced that current stance has to be changed. Otherwise someone else will inevitably create another Q&A site, where anyone can ask a programming question without being reproached for having a problem of not that global calibre.
+I believe that Meta site of Stack Overflow is the right place for such a discussion. And I am looking for the feedback on this proposal. All your opinions will be considered with gratitude. The only outcome with which I don't agree in advance is to leave evarything as is. Simply because I am sure that in this case someone else will inevitably create another Q&A site, where anyone can ask a programming question without being reproached for having a problem of not that global calibre.
