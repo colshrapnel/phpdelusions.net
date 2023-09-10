@@ -2,7 +2,7 @@ I know how to mitigate the Fall of Stack Overflow
 
 ### It simply should be made newbie-friendly
 
-I do realize that such a blunt suggestion likely to be met with a backlash.   
+I do realize that such a blunt suggestion is likely to be met with a backlash.   
 Also, I think it's not the best time, given all the perturbations of the [moderation strike](https://meta.stackexchange.com/questions/389811/moderation-strike-stack-overflow-inc-cannot-consistently-ignore-mistreat-an) to which I greatly sympathize.    
 But please, hear me out.  
 
