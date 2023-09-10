@@ -19,8 +19,8 @@ Current regulations are so confused that it make users to clash in every directi
 - People willing to help do not understand why it's forbidden to help a fellow human being to get 
 out of a simple confusion. And do it anyway, guerrilla-way, even if it takes a long discussion in the comments under already closed question
 - People who keep in mind that library of high quality answers, get bewildered by the number of low quality questions (and answers as well, because such a question hardly gets a good answer)
-- While restricting asking new questions, Stack Overflow still encourages adding new answers, as opposed to improving existing ones
-- Finally, all that mess *is* the "library of answers" we have. As result, people coming from search have to shuffle through innumerable attempts to answer their question. As opposed to settling with a single canonical answer
+- While restricting new questions, Stack Overflow still encourages that [mad race](https://meta.stackexchange.com/questions/9731/fastest-gun-in-the-west-problem) of adding more and more new answers. Simply because people are awarded internet poins only for adding new answers but never for improving existing ones
+- Finally, all that mess *is* "the library of answers" we have. As a result, people coming from search have to shuffle through innumerable attempts to answer their question, as opposed to settling with a single canonical answer
 
 Or, rather a funny fact: Stack Overflow claims itself being [not a forum](https://stackoverflow.com/tour), but if you take a look at any [popular question](https://stackoverflow.com/q/40480/285587), it looks *exactly like a forum thread,* where answers or comments often [argue with each other](https://stackoverflow.com/a/51522896/285587).
 
