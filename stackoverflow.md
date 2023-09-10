@@ -67,7 +67,7 @@ The irony, it will be pretty much the same as the current approach (when low qua
 
 ### Fulfilling the Noble purpose
 
-Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still struggles to achieve its noble goal. Because it's same old answer to ad-hoc question that suddenly becomes canonical, because Google for some reason chose this particular question among others. But what is good for ad-hoc questions, turns into a great disservice when it comes to canonical answers. 
+Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still struggles to achieve its noble goal. Because it's same old answer to ad-hoc question that suddenly becomes canonical, because Google for some reason chose this particular question among others. But sich is a human nature, that people never write a canonical answer to ad-hoc question. Instead, the always cater to the present issue. Not to mention that competitive approacj, when a question gets hald a dozen different answers. Which could be good for ad-hoc questions, but turns into a great disservice when it comes to canonical answers. 
 
 Quite too often, instead of a "detailed high-quality answer", a user coming from search is faced with multiple similar questions, each crowded with a motley lot of assorted attempts to answer it. 
 Which makes finding a good answer rather a challenge:
@@ -98,7 +98,7 @@ The participant's mindset must be changed as well. They should stop catering to 
 
 As you can see, currently Stack Overflow puts the burden of creating reference questions for that "library of high quality answers" on the people who ask. "Either make your question canonical or go away". But it will never work. That task should be carried on by the community, by people of experience, not by people who ask questions.
 
-And for the best results, achievement of these goals is better to be physically separated. Ad-hoc questions could be answered in a forum-like dialogue, allowing both parties to add code, images, to answer each other's questions. Although Stack Overflow takes pride for being not a forum, there is nothing to boast about. Many questions simply *cannot* be answered without a discussion. Why not to make it comfortable for all parties? 
+And for the best results, achievement of these goals is better to be physically separated. Ad-hoc questions could be answered in a forum-like mode, a dialodute that allows both parties to add code or images, to answer each other's questions. Although Stack Overflow takes pride for being not a forum, there is nothing to boast about. Many questions simply *cannot* be answered without a discussion. Why not to make it comfortable for all parties? 
 
 At the same time, canonical answers are best to be made more like Wikipedia articles, with a separate "Discussion" tab, and being specifically written, including a correct title, a generic question and a canonical answer, that features a good practice first and any shortcuts (if any) later, with drawbacks well explained.
 
