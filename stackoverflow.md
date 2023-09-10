@@ -51,7 +51,7 @@ Yet, all their effort is for naught. It's just *technically impossible* to ban a
 
 Besides, this attitude tramples on the most vulnerable audience - noobs and amateurs. Asking a good question is a skill on its own. And even for a professional it takes a considerable effort. But the same skill is expected from someone taking first feeble steps in the profession. Yes, doing a proper research of course must be encouraged. But it doesn't mean that learners should be just flipped off. Stack Overflow shouldn't be made into an elitist club. A Q&A site must be open for everyone. 
 
-Besides, it's simply *counter-productive*. Why even ban people from asking a silly question? Especially in the current situation. You are probably aware of this article, [The Fall of Stack Overflow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow). It's a fact that traffic is drying up. Which means, Stack Overflow is less demanded as that "library of high-quality answers". But people who prefer assistance from a fellow human being still exist and numerous. It's time to embrace them. 
+Besides, it's simply *counter-productive*. Why even ban people from asking a silly question? Especially in the current situation. You are probably aware of this recent article, [The Fall of Stack Overflow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow). It's a fact that traffic is drying up. Which means, Stack Overflow is less demanded as that "library of high-quality answers". But people who prefer assistance from a fellow human being still exist and numerous. It's time to embrace them. 
 
 ### Creating better experience for those who ask
 
