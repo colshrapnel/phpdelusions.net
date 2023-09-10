@@ -55,7 +55,7 @@ Besides, it's simply *counter-productive*. Why even ban people from asking a sil
 
 ### Creating better experience for those who ask
 
-Why not to make it this way: just let a newbie question to have an answer but then *simply delete it* without further ado? It will make everyone happy, yet such questions won't get in the way of the Noble goal.
+Why not to make it this way: just let a silly question to be answered, but then *simply delete it* altogether, without further ado? It will make everyone happy, yet such questions won't get in the way of the Noble goal.
 
 I am strongly convinced that following changes must be implemented:
 
