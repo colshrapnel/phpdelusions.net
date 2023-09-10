@@ -6,8 +6,7 @@ I know, this suggestion will be met with much opposition from all sides.
 I know, it's not the best time, given all the perturbations of the [moderation strike](https://meta.stackexchange.com/questions/389811/moderation-strike-stack-overflow-inc-cannot-consistently-ignore-mistreat-an) to which I greatly sympathize.    
 But please, hear me out.  
 
-> Please note, English is not my native language and sometimes the choice of words, as well as grammar, are not perfect. Please try to get past such glitches to the actual meaning. I'll readily apply all the improvements suggested. 
-But this proposal is very dear to me, I was pondering on it for a long time. Please give it a thought. It actually makes sense. 
+> Please note, English is not my native language and sometimes the choice of words, as well as grammar, are not perfect. Please try to get past such glitches to the actual meaning. This proposal is very dear to me, I was pondering on it for a long time. Please give it a thought. It actually makes sense. 
 
 ### The eternal controversy
 
