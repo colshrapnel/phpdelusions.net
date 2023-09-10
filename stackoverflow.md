@@ -28,7 +28,7 @@ But, out of all that confusion, I'd say that experience for people coming to ask
 
 *Most questions currently asked on Stack Overflow are off topic*. Or so it looks. Right now I am looking at the list of new questions under the [[Java]](https://stackoverflow.com/questions/tagged/java?tab=Newest) tag. Most of them are either already closed, or in the process, having one or few close votes on them. 
 
-And it's no wonder, given the list of closure reasons (excluding those intended for deliberate harm):
+And it's no wonder, given the list of closure reasons:
 
 - Duplicate
 - Needs details or clarity
