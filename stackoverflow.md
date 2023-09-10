@@ -46,7 +46,7 @@ And all this gruesome experience is to prevent [stupid questions](https://meta.s
 
 There is an old article, [The decline of Stack Overflow](https://johnslegers.medium.com/the-decline-of-stack-overflow-7cb69faa575d) (not to be confused with "The Fall..." mentioned below), with a long list of similar articles at the bottom, followed by a [heated discussion on Reddit](https://www.reddit.com/r/programming/comments/3cafkp/is_stack_overflow_overrun_by_trolls/). This article, although being factually correct, uses rather a strong language towards volunteers and moderators. And - as I feel it - unjustly. The whole community cannot be trolls. The problem is not the people, but the system: it's the very contradiction mentioned above that antagonizes people. And mods are not evil. They just follow the rules aimed at fulfilling the Noble purpose.
 
-Yet, all their effort is for naught. It's just *technically impossible* to ban all those people who have no idea of the Noble purpose but just have a problem at hand and looks for assistance - may be just a nudge in the the right direction or a fresh pair of eyes. And considers a programming Q&A site the right place where to ask for help. Neither those, who have a spare time to help a fellow undergraduate, will ever understand why it's forbidden. Or how to actually earn their internet points, if most questions must be closed, not answered. People won't have it. It's a lost battle, no mater how strict rules you impose. 
+Yet, all their effort is for naught. It's just *technically impossible* to ban all those people who have no idea of the Noble purpose but just have a problem at hand and look for assistance - may be just a nudge in the the right direction or a fresh pair of eyes. And consider a programming Q&A site the right place where to ask. Neither those who have a spare time to help a fellow undergraduate, will ever understand why it's forbidden. Or how to actually earn their internet points, if most questions must be closed, not answered. People won't have it. It's a lost battle, no mater how strict rules you impose. 
 
 Besides, it's just inhumane. Asking a good question is a skill on its own. And even for a professional it takes a considerable effort. But the same skill is expected from someone taking first feeble steps in the profession. Yes, doing a proper research of course must be encouraged. But it doesn't mean that learners should be just flipped off. Stack Overflow shouldn't be made into an elitist club. A Q&A site must be open for everyone. 
 
@@ -58,16 +58,16 @@ Why not to make it this way: actually *answer* a newbie question but then *just 
 
 I am strongly convinced that following changes must be implemented:
 
-- No voting down on questions. It serves absolutely no purpose other than harassing the OP and as a flag for the future auto-delete (optionally, there could be some canned responses that *explain* how the question could be improved, which is much better than a downvote)
+- No voting down on questions. It serves absolutely no purpose other than harassing the OP and as a flag for the future auto-delete. Оptionally, there could be some canned responses that *explain* how the question could be improved, which is much better than a downvote
 - Instead, there must be an option to flag a question as having *no community value*
-- Questions flagged such must be simply *removed* after getting resolved (or after a reasonable timeout)
+- Questions flagged such, must be simply *removed* after getting resolved (or after a reasonable timeout)
 - Closure reasons listed above should just add such a flag, but don't close the question, letting anyone to answer.
 
-The irony, it will be pretty much the same as the current approach, when [low quality questions get automatically deleted](https://stackoverflow.com/help/auto-deleted-questions), but - without all the grudge! You see, it's really simple: if a question is going to be deleted anyway, it's no use to punish the OP and does no harm to answer. The same outcome but without all the bad vibes!
+The irony, it will be pretty much the same as the current approach (when low quality questions are downvoted, closed, yet stll answered in the comments, and finally get [automatically deleted](https://stackoverflow.com/help/auto-deleted-questions)), but - without all the grudge! You see, it's really simple: if a question is going to be deleted anyway, it's no use to punish the OP and does no harm to answer. The same outcome but without all the bad vibes!
 
 ### Fulfilling the Noble purpose
 
-Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still doesn't achieve its noble goal. Because it's same old answer to ad-hoc question that became canonical because Google for some reason chose it among other similar questions. But what is good for ad-hoc questions, turns into a great disservice when it comes to canonical answers. 
+Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still struggles to achieve its noble goal. Because it's same old answer to ad-hoc question that suddenly becomes canonical, because Google for some reason chose this particular question among others. But what is good for ad-hoc questions, turns into a great disservice when it comes to canonical answers. 
 
 Quite too often, instead of a "detailed high-quality answer", a user coming from search is faced with multiple similar questions, each crowded with a motley lot of assorted attempts to answer it. 
 Which makes finding a good answer rather a challenge:
