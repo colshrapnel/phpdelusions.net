@@ -1,3 +1,5 @@
+I know how to mitigate the Fall of Stack Overflow
+
 ### It simply should be made newbie-friendly
 
 I know, this suggestion will be met with much opposition from all sides.   
