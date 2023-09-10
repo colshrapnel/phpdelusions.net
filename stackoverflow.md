@@ -9,24 +9,25 @@ But please, hear me out.
 
 ### The eternal controversy
 
-Stack Overflow was designed to sit between two stools: to answer "ad-hoc" questions and ["to build a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour). But when pursued simultaneously, these two goals are rather mutually exclusive, and, as a result, frantically step on each other's toes, greatly *worsening* the achievement of both. I call it the eternal controversy of Stack Overflow.
+Stack Overflow was designed to help programmers two way: by answering questions asked explicitly, and by creating ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour), so people can instantly find an already existing answer to their question. It turned out that, if pursued simultaneously, these two goals are rather mutually exclusive, and, as a result, frantically step on each other's toes, greatly *worsening* the achievement of both. I call it the eternal controversy of Stack Overflow. 
+
+If you think of it, a good canonical question should be specicifally made, by making it precisely formulated, supplied with a good informative title, and stripped of all insignificant details. But people usually don't ask canonical questions. They just have a hot, "ad hoc" problem they need a solution for. After realizing that (and having accumulated a fair amount of questions), Stack Overflow has started to tighten the rules, asking people coming for help to ask only canonical questions. But it doesn't seem to work.
 
 Current regulations are so confused that it make users to clash in every direction:
 
 - People asking questions don't understand why it's forbidden. And ask anyway. 
-- People willing to help do not understand why it's forbidden to help a fellow human being to get 
-out of a simple confusion. And do it anyway, guerrilla-way, even if it takes a long discussion in the comments under already closed question
+- People willing to help do not understand why it's forbidden to help a fellow human being to get out of a simple confusion. And do it anyway, guerrilla-way, even if it takes a long discussion in the comments under already closed question
 - People who keep in mind that library of high quality answers, get bewildered by the number of low quality questions (and answers as well, because such a question hardly gets a good answer)
 - While restricting new questions, Stack Overflow still encourages that [mad race](https://meta.stackexchange.com/questions/9731/fastest-gun-in-the-west-problem) of adding more and more new answers. Simply because people are awarded internet poins only for adding new answers but never for improving existing ones
 - Finally, all that mess *is* "the library of answers" we have. As a result, people coming from search have to shuffle through innumerable attempts to answer their question, as opposed to settling with a single canonical answer
 
-Or, rather a funny fact: Stack Overflow claims itself being [not a forum](https://stackoverflow.com/tour), but if you take a look at any [popular question](https://stackoverflow.com/q/40480/285587), it looks *exactly like a forum thread,* where answers or comments often [argue with each other](https://stackoverflow.com/a/51522896/285587).
+Or, such a funny fact: Stack Overflow claims itself being [not a forum](https://stackoverflow.com/tour), but if you take a look at any [popular question](https://stackoverflow.com/q/40480/285587), it looks *exactly like a forum thread,* where answers or comments often [argue with each other](https://stackoverflow.com/a/51522896/285587).
 
 But, out of all that confusion, I'd say that experience for people coming to ask a question is the worst. 
 
 ### The problem
 
-*Most questions currently asked on Stack Overflow are off topic*. Or so it looks. Right now I am looking at the list of new questions under the [[Java]](https://stackoverflow.com/questions/tagged/java?tab=Newest) tag. Most of them are either already closed, or in the process, having one or few close votes on them. 
+*Most questions currently asked on Stack Overflow are off topic*. Or so it looks like. Right now I am looking at the list of new questions under the [[Java]](https://stackoverflow.com/questions/tagged/java?tab=Newest) tag. Most of them are either already closed, or in the process, having one or few close votes on them. 
 
 And it's no wonder, given the list of closure reasons:
 
