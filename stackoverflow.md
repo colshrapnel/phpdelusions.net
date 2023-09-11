@@ -62,7 +62,7 @@ The irony, it will be pretty much the same as the current approach (when low qua
 
 ### Fulfilling the Noble purpose
 
-Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still struggles to achieve its noble goal. Because it's the same old answer to ad-hoc question that suddenly became canonical, because Google for some reason chose this particular question among others. But such is a human nature, that people never write a canonical answer to ad-hoc question. Instead, they always cater for the OP to the minute detail. Not to mention that competitive approach, when a question gets half a dozen different answers in 5 minutes. Which could be good for ad-hoc questions, but turns into a great disservice when it comes to canonical answers. 
+Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still struggles to achieve its noble goal. When we land from search, it's the same old answer to ad-hoc question, that Google appointed canonical, for the reasons best known to itself. Such is a human nature, that people never write a canonical answer to ad-hoc question. Instead, they always cater for the OP to the minute detail. Not to mention that competitive approach, when a question gets half a dozen different answers in 5 minutes. Which could be good for ad-hoc questions, but turns into a great disservice when it comes to canonical answers. 
 
 Quite too often, instead of a "detailed high-quality answer", a user coming from search is faced with multiple similar questions, each crowded with a motley lot of assorted attempts to answer it. 
 Which makes finding a good answer rather a challenge:
