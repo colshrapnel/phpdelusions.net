@@ -15,7 +15,7 @@ But still, the experience for people who come for help is the worst.
 
 ### The problem
 
-*Most questions currently asked on Stack Overflow are off topic*. Right now I am looking at the list of new questions under the [[Java]](https://stackoverflow.com/questions/tagged/java?tab=Newest) tag. Most of them are either already closed, or in the process, having one or few close votes on them. And it's no wonder, given the list of closure reasons:
+*Most questions currently asked on Stack Overflow are off topic*. Right now I am looking at the list of new questions under the [[Java]](https://stackoverflow.com/questions/tagged/java?tab=Newest) tag. Most of them are either already closed, or in the process, having one or few close votes on them. And it's no wonder, given the list of closure reasons (actually, just the first item is enough, as after all those years, 90% of newly asked questions are inevitably duplicates, more or less):
 
 - Duplicate
 - Needs details or clarity
@@ -25,7 +25,7 @@ But still, the experience for people who come for help is the worst.
 - Seeking recommendations for books, tools, software libraries, and more
 - Not reproducible or was caused by a typo    
 
-(After putting them together, I can't help but hear them [intoned by a snarky teacher](https://i.stack.imgur.com/ZjOYA.jpg)). Actually, even the first item is enough, as after all those years, 90% of newly asked questions are inevitably duplicates, more or less.
+(After putting them together, I can't help but hear them [intoned by a snarky teacher](https://i.stack.imgur.com/ZjOYA.jpg)).
 
 But, jokes aside, there is a real problem: this list outlaws most *newbie* questions out there. If you think of it, asking a good question is a skill on its own. And even for a professional it takes a considerable effort. Yet, the same skill is expected from someone taking first feeble steps in the profession. But instead of help, most newbies only meet with closures and downvotes. Because Stack Overflow doesn't want [stupid questions](https://meta.stackoverflow.com/q/314372/285587) to get in the way of the Noble goal.
 
@@ -33,7 +33,7 @@ So it's no wonder that too many people are starting to see Stack Overflow as an 
 
 Yet, all their effort is for naught. It's just *technically impossible* to ban all those people who have no idea of that Library, but just got a problem at hand and look for assistance (which could be just a nudge in the right direction or a fresh pair of eyes). To them, it's just natural to ask a programming question on Stack Overflow... only to realize that their question isn't good enough for this site.
 
-On the other hand, many people who have spare time to help a fellow undergraduate, do not understand why it's forbidden either. Or how to actually earn their internet points, if most questions must be closed, not answered. Or, for that matter - how to gain enough reputation points that would enable them to actually close a question or at least leave a comment. That's too twisted a logic, people will never buy it.
+On the other hand, many people who have spare time to help a fellow undergraduate, do not understand why it's forbidden either. Or how to actually earn their internet points, if most questions must be closed, not answered. Or, for that matter - how to gain enough reputation points that would enable them to actually close a question or at least to leave a comment. That's too twisted a logic, people will never buy it.
 
 And here we are coming to the point of this article. You are probably aware of this recent post, [The Fall of Stack Overflow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow). It's a fact that traffic is drying up. Which means, Stack Overflow is less demanded as that "library of high-quality answers". But people who prefer assistance from fellow human beings still exist and are numerous.
 
@@ -54,23 +54,23 @@ The irony, it will be pretty much the same as the current approach (when low qua
 
 ### Fulfilling the Noble purpose
 
-Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still struggles to achieve its Noble goal. When we land from search, it's the same old answer to an ad-hoc question, which Google appointed canonical, for reasons best known to itself. And many such answers are hardly intermediate, least "high quality" ones. Such is human nature, people never write a canonical answer to an ad-hoc question. Instead, they always cater for the OP to the minute detail. Not to mention that [mad races](https://meta.stackexchange.com/questions/9731/fastest-gun-in-the-west-problem), when a question gets half a dozen different answers in 5 minutes. Which could be good for ad-hoc questions, but turns into a great disservice when it comes to canonical answers.
+Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still struggles to achieve its Noble goal. When we land from search, it's the same old answer to an ad-hoc question, which Google appointed canonical, for reasons best known to itself. And many such answers are hardly intermediate, least of "high" quality. Such is human nature, people never write a canonical answer to an ad-hoc question. Instead, they always cater for the OP to the minute detail. Not to mention those [mad races](https://meta.stackexchange.com/questions/9731/fastest-gun-in-the-west-problem), when a question gets half a dozen different answers in 5 minutes. Which could be good for ad-hoc questions, but turns into a great disservice when it comes to canonical answers.
 
 Quite too often, instead of a "detailed high-quality answer", a user coming from search is faced with multiple similar questions, each crowded with a motley lot of assorted attempts to answer it. Which makes finding a good answer rather a challenge:
 
 - First, each question being asked [dozens of times](https://www.google.com/search?q=submit+form+without+reloading+page+js+site:stackoverflow.com).
 - Second, each separate question gets [dozens of answers](https://stackoverflow.com/questions/2866063/submit-form-without-page-reloading).
-- Third, nobody cares whether these answers are up to date, feature a good practice or outright make any sense. And no, voting of no help whatsoever. Following the [herd conscience](https://en.wikipedia.org/wiki/Herd_behavior), people tend to upvote already popular answers. For example, for the question above, the modern way of doing things, using Fetch API, is only mentioned way down below, being awarded one single upvote in a year. How many people will make it to this answer? How many people will have enough expertise to understand that it's the recommended method nowadays? Besides, it's just incorrect to rely on the votes from people who are looking for answers. By definition they don't have enough expertise to judge. While those who do, just have no business to check these answers.
+- Third, nobody cares whether these answers are up to date, feature a good practice or outright make any sense. And no, voting of no help whatsoever. Following the [herd conscience](https://en.wikipedia.org/wiki/Herd_behavior), people tend to upvote already popular answers. For example, for the question above, the modern way of doing things, using Fetch API, is only mentioned way down below, being awarded one single upvote in a year. How many people will make it to this answer? How many people will have enough expertise to understand that it's the recommended method nowadays? Besides, it's just incorrect to rely on the votes from people who are looking for answers. By definition they don't have enough expertise to judge. While those who do, just have no business reading answers.
 - Finally, many false positive results, when one lands on a question with a misleading title.
 
 Yes, a relatively small number of most popular questions gradually get something that can be called an acceptable answer, or even a high-quality one. The problem is, it's rather against the rules. Or at least never encouraged by current regulations. Which:
 
 - encourage selfish and competitive attitude
-- reward you for adding new answers but never never for improving an existing one
+- reward you for adding more new answers but never for improving an existing one
 - defend a selfish author who doesn't want their answer to be improved
-- doesn't distinguish between ad-hoc questions and canonical ones. Quite too often, when you land on a question with a canonical title, all you see is some shortcut or a questionable tradeoff. Just couple examples: [Cannot delete or update a parent row](https://stackoverflow.com/a/17828127/285587) and [mysql error 1364 Field doesn't have a default values](https://stackoverflow.com/questions/15438840/mysql-error-1364-field-doesnt-have-a-default-values) are quite frequent SQL errors that deserve a thorough explanation. But both topmost answers contain anything but such an explanation. Yes, for the *particular ad-hoc question* they possibly offer a plausible tradeoff. But after picking up some wind, a question automatically becomes a *canonical post on the topic* (while *nowhere being so!*), where people come with different problems indicated by the same error message. And such a narrow-minded answer instantly becomes a disservice.
+- doesn't distinguish between ad-hoc questions and canonical ones. Quite too often, when you land on a question with a canonical title, all you see is some shortcut or a questionable tradeoff. Just couple examples: [Cannot delete or update a parent row](https://stackoverflow.com/a/17828127/285587) and [mysql error 1364 Field doesn't have a default values](https://stackoverflow.com/questions/15438840/mysql-error-1364-field-doesnt-have-a-default-values) are quite frequent SQL errors that deserve a thorough explanation. But both topmost answers contain anything but such an explanation. Yes, for the *particular ad-hoc question* they possibly offer a plausible tradeoff. But after picking up some wind, a question automatically becomes a *canonical post on the topic*, where people come with different problems indicated by the same error message. And such a narrow-minded answer instantly becomes a disservice.
 
-As you can see, using the same approach for answering ad-hoc questions and building a library of  canonical answers creates rather a mess.
+As you can see, using the same approach for answering ad-hoc questions and building a library of canonical answers creates rather a mess.
 
 I am strongly convinced that creation of such a library should be a distinct task, separated from answering ad-hoc questions. And it must be based on a collaborative, not competitive effort.
 
