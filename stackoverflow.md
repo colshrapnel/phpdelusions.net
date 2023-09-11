@@ -7,8 +7,6 @@ But please, hear me out.
 
 > Please note, English is not my native language and sometimes the choice of words, as well as grammar, are not perfect. Please try to get past such glitches to the actual meaning. This proposal is very dear to me, I was pondering on it for a long time. Please give it a thought. It actually makes sense. 
 
-### The eternal controversy
-
 Stack Overflow was designed to help programmers two way: by answering questions asked explicitly, and by creating ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour) out of such questions, so people can instantly find an already existing solution for their problem. After some time, being overwhelmed by the endless stream of low quality questions, Stack Overflow started to tighten the rules, adding closure reasons and making it easier to close a question. But it doesn't seem to work. Instead, it leaves everyone confused:
 
 - People asking questions don't understand why it's forbidden. 
