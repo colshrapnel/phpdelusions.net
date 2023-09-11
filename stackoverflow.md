@@ -7,7 +7,7 @@ But please, hear me out.
 
 > Please note, English is not my native language and sometimes the choice of words, as well as grammar, are not perfect. Please try to get past such glitches to the actual meaning. This proposal is very dear to me, I was pondering on it for a long time. Please give it a thought. It actually makes sense. 
 
-Stack Overflow declares its goal as creation of ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour). It's the Holy Grail, the Noble goal. But such a library cannot exist without, well - questions. So Stack Overflow also lets people to ask them. But it looks like that people who have questions are not much a concern. They are just a building material for the great library. And Stack Overflow being picky about questions it's willing to answer: only "practical, detailed questions" are welcome. And such an attitude being the source of huge misunderstanding, as people tend to see a Q&A site as a place where they are a concern, no an asset. A place where they can get help for their problem.
+Stack Overflow declares its goal as creation of ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour). It's the Holy Grail, the Noble goal. But such a library cannot exist without, well - questions. So Stack Overflow also lets people to ask them. But it looks like that people who have questions are not much a concern. They are just a building material for the great library. And Stack Overflow being picky about questions it's willing to answer: only "practical, detailed questions" are welcome. And such an attitude being the source of huge misunderstanding, a Q&A site is commonly seen a place where people are a concern, not asset. A place where they can get help for their problem.
 
 Such ambiguous situation creates a lot of confusion and contradiction:
 
@@ -21,9 +21,7 @@ But, out of all that confusion, I'd say that experience for people coming to ask
 
 ### The problem
 
-*Most questions currently asked on Stack Overflow are off topic*. Or so it feels like. Right now I am looking at the list of new questions under the [[Java]](https://stackoverflow.com/questions/tagged/java?tab=Newest) tag. Most of them are either already closed, or in the process, having one or few close votes on them. 
-
-And it's no wonder, given the list of closure reasons:
+*Most questions currently asked on Stack Overflow are off topic*. Right now I am looking at the list of new questions under the [[Java]](https://stackoverflow.com/questions/tagged/java?tab=Newest) tag. Most of them are either already closed, or in the process, having one or few close votes on them. And it's no wonder, given the list of closure reasons:
 
 - Duplicate
 - Needs details or clarity
@@ -32,20 +30,21 @@ And it's no wonder, given the list of closure reasons:
 - Needs debugging details
 - Seeking recommendations for books, tools, software libraries, and more
 - Not reproducible or was caused by a typo    
-(after putting together this list, I can't help but see it as a list of [snarky teacher's quotes](https://i.stack.imgur.com/ZjOYA.jpg)
-)
+(after putting together this list, I can't help but see it as a list of [snarky teacher's quotes](https://i.stack.imgur.com/ZjOYA.jpg))
 
-What is important, this list *outlaws most newbie questions out there.* And it's not normal. There is a huge mismatch between what people take Stack Overflow for, and what Stack Overflow actually is. And noobs come asking questions anyway, only to face with closures and downvotes. 
+But the most lamentable part, this list *outlaws most newbie questions out there.* And it's not normal. There is a huge mismatch between what people take Stack Overflow for, and what Stack Overflow actually is. Noobs will come asking questions anyway, but only to face with closures and downvotes. 
 
-And all this gruesome experience is to prevent [stupid questions](https://meta.stackoverflow.com/q/314372/285587) from getting in the way of the Noble goal, creation of that *library of high-quality answers*. And this situation is really getting out of hand, because too many people are seeing Stack Overflow as an evil place, which even become [a meme](https://www.reddit.com/r/ProgrammerHumor/comments/u49a6j/sad_truth/).
+And all this gruesome experience is to prevent [stupid questions](https://meta.stackoverflow.com/q/314372/285587) from getting in the way of the Noble goal. Which, honestly, looks more like gatekeeping. And no wonder that too many people are starting to see Stack Overflow as an evil place, which even become [a commonplace](https://www.reddit.com/r/ProgrammerHumor/comments/u49a6j/sad_truth/).
 
 There is an old article, [The decline of Stack Overflow](https://johnslegers.medium.com/the-decline-of-stack-overflow-7cb69faa575d) (not to be confused with "The Fall..." mentioned below), followed by a [heated discussion on Reddit](https://www.reddit.com/r/programming/comments/3cafkp/is_stack_overflow_overrun_by_trolls/), where people are using rather a strong language towards volunteers and moderators. And - I believe it - unjustly. The whole community cannot be trolls. The problem is not people, but the system. Mods are not evil. They just follow the rules aimed at fulfilling the Noble purpose.
 
-Yet, all their effort is for naught. It's just *technically impossible* to ban all those people who have no idea of the Noble goal pursued by Stack Overflow, but just got a problem at hand and look for assistance (which could be be just a nudge in the the right direction or a fresh pair of eyes). To them, it's just natural to ask a programming question on Stack Overflow... only to realize that their question isn't good enough for this site. On the other hand, many people, who have a spare time to help a fellow undergraduate, do not understand why it's forbidden either. Or how to actually earn their internet points, if most questions must be closed, not answered. Or, for that matter - how to gain enough reputation points that would enable them to actually close a question or at least leave a comment. That's too twisted a logic, people will never buy it. 
+Yet, all their effort is for naught. It's just *technically impossible* to ban all those people who have no idea of the Noble goal pursued by Stack Overflow, but just got a problem at hand and look for assistance (which could be be just a nudge in the the right direction or a fresh pair of eyes). To them, it's just natural to ask a programming question on Stack Overflow... only to realize that their question isn't good enough for this site. 
 
-Besides, this attitude tramples on the most vulnerable audience - noobs and amateurs. Asking a good question is a skill on its own. And even for a professional it takes a considerable effort. But the same skill is expected from someone taking first feeble steps in the profession. Yes, doing a proper research of course must be encouraged. But it doesn't mean that learners should be just flipped off. Stack Overflow shouldn't be made into an elitist club. A Q&A site must be open for everyone. 
+On the other hand, many people who have a spare time to help a fellow undergraduate, do not understand why it's forbidden either. Or how to actually earn their internet points, if most questions must be closed, not answered. Or, for that matter - how to gain enough reputation points that would enable them to actually close a question or at least leave a comment. That's too twisted a logic, people will never buy it. 
 
-Besides, it's simply *counter-productive*. Why even ban people from asking a silly question? Especially in the current situation. You are probably aware of this recent article, [The Fall of Stack Overflow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow). It's a fact that traffic is drying up. Which means, Stack Overflow is less demanded as that "library of high-quality answers". But people who prefer assistance from a fellow human being still exist and numerous. It's time to embrace them. 
+And after all, such attitude is simply *counter-productive*, especially in the current situation. You are probably aware of this recent article, [The Fall of Stack Overflow](https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow). It's a fact that traffic is drying up. Which means, Stack Overflow is less demanded as that "library of high-quality answers". But people who prefer assistance from a fellow human being still exist and numerous.
+
+I believe, it's time to embrace them. Yes, of course doing a proper research of course must be encouraged. But it doesn't mean that learners should be just flipped off. Stack Overflow shouldn't be made into an elitist club. A Q&A site must be open for everyone. 
 
 ### Creating better experience for those who ask
 
