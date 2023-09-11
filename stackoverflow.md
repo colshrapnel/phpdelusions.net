@@ -2,7 +2,7 @@ I know how to mitigate the Fall of Stack Overflow
 
 ### The site simply should be made newbie-friendly
 
-I do realize that such a blunt suggestion is likely to be met with a backlash, from all sides.     
+I do realize that such a blunt suggestion is likely to be met with immediate backlash, from all sides.     
 But please, hear me out.  
 
 > Please note, English is not my native language and sometimes the choice of words, as well as grammar, are not perfect. Please try to get past such glitches to the actual meaning. This proposal is very dear to me, I was pondering on it for a long time. Please give it a thought. It actually makes sense. 
@@ -11,14 +11,12 @@ But please, hear me out.
 
 Stack Overflow was designed to help programmers two way: by answering questions asked explicitly, and by creating ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour) out of such questions, so people can instantly find an already existing solution for their problem. It turned out that, if pursued simultaneously, these two goals are rather contradictory, and greatly impede the achievement of each other. I call it the eternal controversy of Stack Overflow. 
 
-If you think of it, a good canonical question should be specicifally shaped, by having it precisely and unambiguosly formulated, supplied with a good informative title, and stripped of all insignificant details. But people usually don't ask canonical questions. They just have a hot, "ad hoc" problem they need a solution for. After realizing that (and having accumulated a fair amount of questions), Stack Overflow has started to tighten the rules, asking people coming for help to ask only canonical questions. But it doesn't seem to work.
+If you think of it, a good canonical question should be specicifally shaped, by having it precisely and unambiguosly formulated, supplied with a good informative title, and stripped of all insignificant details. But people usually don't ask canonical questions. They just have a hot, ad-hoc problem they need a solution for. After realizing that, Stack Overflow has started to tighten the rules, asking people coming for help to ask only canonical questions. But it doesn't seem to work. Instead, it leaves everyone confused:
 
-Current regulations are so confused that it make users to clash in every direction:
-
-- People asking questions don't understand why it's forbidden. And ask anyway. 
+- People asking questions don't understand why it's forbidden. 
 - People willing to help do not understand why it's forbidden to help a fellow human being to get out of a simple confusion. And do it anyway, guerrilla-way, even if it takes a long discussion in the comments under already closed question
 - People who keep in mind that library of high quality answers, get bewildered by the number of low quality questions (and answers as well, because such a question hardly gets a good answer)
-- While restricting new questions, Stack Overflow still encourages that [mad race](https://meta.stackexchange.com/questions/9731/fastest-gun-in-the-west-problem) of adding more and more new answers. Simply because people are awarded internet poins only for adding new answers but never for improving existing ones
+- While restricting new questions, Stack Overflow still encourages that [mad race](https://meta.stackexchange.com/questions/9731/fastest-gun-in-the-west-problem) of adding more and more new answers. Simply because people are awarded internet poins only for adding new answers but never for improving already existing information.
 - Finally, all that mess *is* "the library of answers" we have. As a result, people coming from search have to shuffle through innumerable attempts to answer their question, as opposed to settling with a single canonical answer
 
 Or, such a funny fact: Stack Overflow claims itself being [not a forum](https://stackoverflow.com/tour), but if you take a look at any [popular question](https://stackoverflow.com/q/40480/285587), it looks *exactly like a forum thread,* with numerous replies, some of which even [argue with each other](https://stackoverflow.com/a/51522896/285587).
@@ -47,7 +45,7 @@ And all this gruesome experience is to prevent [stupid questions](https://meta.s
 
 There is an old article, [The decline of Stack Overflow](https://johnslegers.medium.com/the-decline-of-stack-overflow-7cb69faa575d) (not to be confused with "The Fall..." mentioned below), with a long list of similar articles at the bottom, followed by a [heated discussion on Reddit](https://www.reddit.com/r/programming/comments/3cafkp/is_stack_overflow_overrun_by_trolls/), where people are using rather a strong language towards volunteers and moderators. And - as I feel it - unjustly. The whole community cannot be trolls. The problem is not the people, but the system: it's the very contradiction mentioned above that antagonizes people. And mods are not evil. They just follow the rules aimed at fulfilling the Noble purpose.
 
-Yet, all their effort is for naught. It's just *technically impossible* to ban all those people who have no idea of the Noble purpose but just got a problem at hand and look for assistance - may be just a nudge in the the right direction or a fresh pair of eyes. And consider a programming Q&A site the right place where to ask. Neither those who have a spare time to help a fellow undergraduate, will ever understand why it's forbidden. Or how to actually earn their internet points, if most questions must be closed, not answered. People won't have it. It's a lost battle, no mater how strict rules you impose. 
+Yet, all their effort is for naught. It's just *technically impossible* to ban all those people who have no idea of the Noble goal pursued by Stack Overflow, but just got a problem at hand and look for assistance (which could be be just a nudge in the the right direction or a fresh pair of eyes). To them, it's just natural to ask a programming question on Stack Overflow... only to realize that their question isn't good enough for this site. On the other hand, many people, who have a spare time to help a fellow undergraduate, do not understand why it's forbidden either. Or how to actually earn their internet points, if most questions must be closed, not answered. That's too twisted a logic, people will never buy it, no mater how strict rules you impose. 
 
 Besides, this attitude tramples on the most vulnerable audience - noobs and amateurs. Asking a good question is a skill on its own. And even for a professional it takes a considerable effort. But the same skill is expected from someone taking first feeble steps in the profession. Yes, doing a proper research of course must be encouraged. But it doesn't mean that learners should be just flipped off. Stack Overflow shouldn't be made into an elitist club. A Q&A site must be open for everyone. 
 
@@ -68,7 +66,7 @@ The irony, it will be pretty much the same as the current approach (when low qua
 
 ### Fulfilling the Noble purpose
 
-Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still struggles to achieve its noble goal. Because it's the same old answer to ad-hoc question that suddenly became canonical, because Google for some reason chose this particular question among others. But such is a human nature, that people never write a canonical answer to ad-hoc question. Instead, the always cater to the OP and address their circumstances. Not to mention the competitive approach, when a question gets half a dozen different answers. Which could be good for ad-hoc questions, but turns into a great disservice when it comes to canonical answers. 
+Now, to our "library of detailed, high-quality answers". Even after making it hard for newbies, Stack Overflow still struggles to achieve its noble goal. Because it's the same old answer to ad-hoc question that suddenly became canonical, because Google for some reason chose this particular question among others. But such is a human nature, that people never write a canonical answer to ad-hoc question. Instead, they always cater for the OP to the minute detail. Not to mention that competitive approach, when a question gets half a dozen different answers in 5 minutes. Which could be good for ad-hoc questions, but turns into a great disservice when it comes to canonical answers. 
 
 Quite too often, instead of a "detailed high-quality answer", a user coming from search is faced with multiple similar questions, each crowded with a motley lot of assorted attempts to answer it. 
 Which makes finding a good answer rather a challenge:
