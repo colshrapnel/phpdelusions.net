@@ -1,6 +1,6 @@
 I know how to mitigate the Fall of Stack Overflow
 
-### The site simply should be made newbie-friendly
+### The site should be made newbie-friendly
 
 I do realize that such a blunt suggestion is likely to be met with immediate backlash, from all sides.     
 But please, hear me out.  
