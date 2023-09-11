@@ -31,11 +31,10 @@ And it's no wonder, given the list of closure reasons:
 - Opinion-based
 - Needs debugging details
 - Seeking recommendations for books, tools, software libraries, and more
-- Not reproducible or was caused by a typo
+- Not reproducible or was caused by a typo    
+(after putting together this list, I can't help but see it as a list of snarky teacher's quotes)
 
-Which simply outlaws *most newbie questions out there!* And if new questions still make it to Stack Overflow, it's rather due to negligence. That's not normal. There is a huge mismatch between what people take Stack Overflow for, and what Stack Overflow actually is.
-
-Yet, people still come asking questions anyway, only to face with closures and downvotes. 
+What is important, this list *outlaws most newbie questions out there.* And it's not normal. There is a huge mismatch between what people take Stack Overflow for, and what Stack Overflow actually is. And they come asking questions anyway, only to face with closures and downvotes. 
 
 And all this gruesome experience is to prevent [stupid questions](https://meta.stackoverflow.com/q/314372/285587) from getting in the way of the Noble goal, creation of that *library of high-quality answers*. And this situation is really getting out of hand, because too many people are seeing Stack Overflow as an evil place, which even become [a meme](https://www.reddit.com/r/ProgrammerHumor/comments/u49a6j/sad_truth/).
 
