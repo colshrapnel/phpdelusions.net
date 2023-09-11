@@ -7,15 +7,15 @@ But please, hear me out.
 
 > Please note, English is not my native language and sometimes the choice of words, as well as grammar, are not perfect. Please try to get past such glitches to the actual meaning. This proposal is very dear to me, I was pondering on it for a long time. Please give it a thought. It actually makes sense. 
 
-Stack Overflow was designed to help programmers two way: by answering questions asked explicitly, and by creating ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour) out of such questions, so people can instantly find an already existing solution for their problem. After some time, being overwhelmed by the endless stream of low quality questions, Stack Overflow started to tighten the rules, by adding new closure reasons and making it easier to close a question. But it doesn't seem to work. Instead, it leaves everyone confused:
+Stack Overflow declares its goal as creation of ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour). It's the Holy Grail, the Noble goal. But such a library cannot exist without, well - questions. So Stack Overflow also lets people to ask them. But it looks like that people who have questions are not much a concern. They are just a building material for the great library. And Stack Overflow being picky about questions it's willing to answer: only "practical, detailed questions" are welcome. And such an attitude being the source of huge misunderstanding, as people tend to see a Q&A site as a place where they are a concern, no an asset. A place where they can get help for their problem.
+
+Such ambiguous situation creates a lot of confusion and contradiction:
 
 - People asking questions don't understand why it's forbidden. 
 - People willing to answer do not understand why it's forbidden to help a fellow human being to get out of a simple confusion.
-- People who keep in mind that library of high quality answers, still get bewildered by the number of low quality questions (and answers as well, because such a question hardly gets a good answer)
-- While restricting new questions, Stack Overflow still encourages that [mad race](https://meta.stackexchange.com/questions/9731/fastest-gun-in-the-west-problem) of adding more and more new answers. Simply because people are awarded internet poins only for adding new answers but never for improving existing ones.
-- Finally, all that mess *is* "the library of answers" we have. As a result, people coming from search have to shuffle through innumerable attempts to answer their question, as opposed to settling with a single canonical answer
+- People who share that Noble goal, get bewildered by the number of low quality questions
 
-Or, such a funny fact: Stack Overflow claims itself being [not a forum](https://stackoverflow.com/tour), but if you take a look at a random [popular question](https://stackoverflow.com/q/40480/285587), it looks *exactly like a forum thread,* with numerous replies, some of which even [argue with each other](https://stackoverflow.com/a/51522896/285587).
+Or, such a funny fact: on the same tour page, Stack Overflow claims itself being "not a forum". But if you open a [random popular question](https://stackoverflow.com/q/40480/285587), it looks *exactly like a forum thread,* with numerous replies, some of which even [argue with each other](https://stackoverflow.com/a/51522896/285587).
 
 But, out of all that confusion, I'd say that experience for people coming to ask a question is the worst. 
 
