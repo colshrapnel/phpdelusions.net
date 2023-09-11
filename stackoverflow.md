@@ -7,17 +7,11 @@ But please, hear me out.
 
 > Please note, English is not my native language and sometimes the choice of words, as well as grammar, are not perfect. Please try to get past such glitches to the actual meaning. This proposal is very dear to me, I was pondering on it for a long time. Please give it a thought. It actually makes sense. 
 
-Stack Overflow declares its goal as creation of ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour). It's the Holy Grail, the Noble goal. But such a library cannot exist without, well - questions. So Stack Overflow also lets people to ask them. But it looks like that people who have questions are not much a concern. They are just a building material for the great library. And Stack Overflow being picky about questions it's willing to answer: only "practical, detailed questions" are welcome. And such an attitude being the source of huge misunderstanding, a Q&A site is commonly seen a place where people are a concern, not asset. A place where they can get help for their problem.
+Stack Overflow declares its goal as creation of ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour). It's the Holy Grail, the Noble goal. But such a library cannot exist without, well - questions. So Stack Overflow also lets people to ask them. But it looks like that people who have questions are not much a concern. They are just a building material for the great library. And Stack Overflow being picky about questions it's willing to answer: only "practical, detailed questions" are welcome. And such an attitude being the source of huge misunderstanding, because a Q&A site is commonly seen a place where users can get help for their problem. Where they are a concern, not asset.
 
-Such ambiguous situation creates a lot of confusion and contradiction:
+Besides, there is one huge miscalculation that impedes the achievement if the Noble goal: Stack Overflow puts too much emphasise on adding new answers, more and more new answers. Only adding new answers will earn you internet points, but never editing an existing one. Ironically, althought this approach is rather good for answering ad-hoc questions, but is it really best for that library? Just a funny fact: on the same tour page, Stack Overflow takes pride for being "not a forum". But if you open a [random popular question](https://stackoverflow.com/q/40480/285587), it looks *exactly like a forum thread,* with numerous replies, some of which even [argue with each other](https://stackoverflow.com/a/51522896/285587).
 
-- People asking questions don't understand why it's forbidden. 
-- People willing to answer do not understand why it's forbidden to help a fellow human being to get out of a simple confusion.
-- People who share that Noble goal, get bewildered by the number of low quality questions
-
-Or, such a funny fact: on the same tour page, Stack Overflow claims itself being "not a forum". But if you open a [random popular question](https://stackoverflow.com/q/40480/285587), it looks *exactly like a forum thread,* with numerous replies, some of which even [argue with each other](https://stackoverflow.com/a/51522896/285587).
-
-But, out of all that confusion, I'd say that experience for people coming to ask a question is the worst. 
+But still, the experience for people who come for help is the worst. 
 
 ### The problem
 
