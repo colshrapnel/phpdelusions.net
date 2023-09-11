@@ -11,7 +11,7 @@ But please, hear me out.
 
 Stack Overflow was designed to help programmers two way: by answering questions asked explicitly, and by creating ["a library of detailed, high-quality answers to every question about programming"](https://stackoverflow.com/tour) out of such questions, so people can instantly find an already existing solution for their problem. It turned out that, if pursued simultaneously, these two goals are rather contradictory, and greatly impede the achievement of each other. I call it the eternal controversy of Stack Overflow. 
 
-If you think of it, a good canonical question should be specicifally shaped, by having it precisely and unambiguosly formulated, supplied with a good informative title, and stripped of all insignificant details. But people usually don't ask canonical questions. They just have a hot, ad-hoc problem they need a solution for. After realizing that, Stack Overflow has started to tighten the rules, asking people coming for help to ask only canonical questions. But it doesn't seem to work. Instead, it leaves everyone confused:
+If you think of it, a good canonical question should be specicifally shaped, by having it precisely and unambiguosly formulated, supplied with a good informative title, and stripped of all insignificant details. But people usually don't ask canonical questions. They just have a hot, ad-hoc problem they need a solution for. And being overwhelmed by the endless stream of low quality questions, Stack Overflow started to tighten the rules, asking people coming for help to ask only canonical questions. But it doesn't seem to work. Instead, it leaves everyone confused:
 
 - People asking questions don't understand why it's forbidden. 
 - People willing to help do not understand why it's forbidden to help a fellow human being to get out of a simple confusion. And do it anyway, guerrilla-way, even if it takes a long discussion in the comments under already closed question
@@ -19,13 +19,13 @@ If you think of it, a good canonical question should be specicifally shaped, by 
 - While restricting new questions, Stack Overflow still encourages that [mad race](https://meta.stackexchange.com/questions/9731/fastest-gun-in-the-west-problem) of adding more and more new answers. Simply because people are awarded internet poins only for adding new answers but never for improving already existing information.
 - Finally, all that mess *is* "the library of answers" we have. As a result, people coming from search have to shuffle through innumerable attempts to answer their question, as opposed to settling with a single canonical answer
 
-Or, such a funny fact: Stack Overflow claims itself being [not a forum](https://stackoverflow.com/tour), but if you take a look at any [popular question](https://stackoverflow.com/q/40480/285587), it looks *exactly like a forum thread,* with numerous replies, some of which even [argue with each other](https://stackoverflow.com/a/51522896/285587).
+Or, such a funny fact: Stack Overflow claims itself being [not a forum](https://stackoverflow.com/tour), but if you take a look at a random [popular question](https://stackoverflow.com/q/40480/285587), it looks *exactly like a forum thread,* with numerous replies, some of which even [argue with each other](https://stackoverflow.com/a/51522896/285587).
 
 But, out of all that confusion, I'd say that experience for people coming to ask a question is the worst. 
 
 ### The problem
 
-*Most questions currently asked on Stack Overflow are off topic*. Or so it looks like. Right now I am looking at the list of new questions under the [[Java]](https://stackoverflow.com/questions/tagged/java?tab=Newest) tag. Most of them are either already closed, or in the process, having one or few close votes on them. 
+*Most questions currently asked on Stack Overflow are off topic*. Or so it feels like. Right now I am looking at the list of new questions under the [[Java]](https://stackoverflow.com/questions/tagged/java?tab=Newest) tag. Most of them are either already closed, or in the process, having one or few close votes on them. 
 
 And it's no wonder, given the list of closure reasons:
 
@@ -37,7 +37,7 @@ And it's no wonder, given the list of closure reasons:
 - Seeking recommendations for books, tools, software libraries, and more
 - Not reproducible or was caused by a typo
 
-It simply outlaws *most newbie questions out there!* And if new questions still make it to Stack Overflow, it's rather due to negligence. That's not normal. There is a huge mismatch between what people take Stack Overflow for, and what Stack Overflow actually is.
+Which simply outlaws *most newbie questions out there!* And if new questions still make it to Stack Overflow, it's rather due to negligence. That's not normal. There is a huge mismatch between what people take Stack Overflow for, and what Stack Overflow actually is.
 
 Yet, people still come asking questions anyway, only to face with closures and downvotes. 
 
@@ -45,7 +45,7 @@ And all this gruesome experience is to prevent [stupid questions](https://meta.s
 
 There is an old article, [The decline of Stack Overflow](https://johnslegers.medium.com/the-decline-of-stack-overflow-7cb69faa575d) (not to be confused with "The Fall..." mentioned below), with a long list of similar articles at the bottom, followed by a [heated discussion on Reddit](https://www.reddit.com/r/programming/comments/3cafkp/is_stack_overflow_overrun_by_trolls/), where people are using rather a strong language towards volunteers and moderators. And - as I feel it - unjustly. The whole community cannot be trolls. The problem is not the people, but the system: it's the very contradiction mentioned above that antagonizes people. And mods are not evil. They just follow the rules aimed at fulfilling the Noble purpose.
 
-Yet, all their effort is for naught. It's just *technically impossible* to ban all those people who have no idea of the Noble goal pursued by Stack Overflow, but just got a problem at hand and look for assistance (which could be be just a nudge in the the right direction or a fresh pair of eyes). To them, it's just natural to ask a programming question on Stack Overflow... only to realize that their question isn't good enough for this site. On the other hand, many people, who have a spare time to help a fellow undergraduate, do not understand why it's forbidden either. Or how to actually earn their internet points, if most questions must be closed, not answered. That's too twisted a logic, people will never buy it, no mater how strict rules you impose. 
+Yet, all their effort is for naught. It's just *technically impossible* to ban all those people who have no idea of the Noble goal pursued by Stack Overflow, but just got a problem at hand and look for assistance (which could be be just a nudge in the the right direction or a fresh pair of eyes). To them, it's just natural to ask a programming question on Stack Overflow... only to realize that their question isn't good enough for this site. On the other hand, many people, who have a spare time to help a fellow undergraduate, do not understand why it's forbidden either. Or how to actually earn their internet points, if most questions must be closed, not answered. Or, for that matter - how to gain enough reputation points that would enable them to actually close a question or at least leave a helpful comment. That's too twisted a logic, people will never buy it. 
 
 Besides, this attitude tramples on the most vulnerable audience - noobs and amateurs. Asking a good question is a skill on its own. And even for a professional it takes a considerable effort. But the same skill is expected from someone taking first feeble steps in the profession. Yes, doing a proper research of course must be encouraged. But it doesn't mean that learners should be just flipped off. Stack Overflow shouldn't be made into an elitist club. A Q&A site must be open for everyone. 
 
@@ -109,4 +109,4 @@ Such a separation will solve many problems at once:
 
 ---
 
-I am strongly convinced that the idea is viable. But I am sure that overlooked many important issues, because it's hard to consider all edge cases from just a single point of view. That's why I hope for a discussion. And I believe that Meta site of Stack Overflow is the right place for such a discussion. The only outcome with which I don't agree in advance is to leave evarything as is. Simply because it's a road to decline. And I am sure that in this case someone else will inevitably create a Q&A site, where anyone can ask a programming question without being reproached for having a problem of not that global calibre.
+I am strongly convinced that the idea is viable and it can revive Stack Overflow. But surely I overlooked many important issues, because it's hard to consider all edge cases from just a single point of view. That's why I am posting here on the Meta site of Stack Overflow and looking for feedback. The only outcome I refuse to accept is leaving everything as is. Simply because it's a road to decline. And in this case someone else will inevitably create another Q&A site, where anyone can ask a programming question without being reproached for having a problem of not that global calibre.
