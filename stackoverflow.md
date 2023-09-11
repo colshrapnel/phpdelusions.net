@@ -32,7 +32,7 @@ And it's no wonder, given the list of closure reasons:
 - Needs debugging details
 - Seeking recommendations for books, tools, software libraries, and more
 - Not reproducible or was caused by a typo    
-(after putting together this list, I can't help but see it as a list of [snarky teacher's quotes](https://i.stack.imgur.com/EQBEC.jpg)
+(after putting together this list, I can't help but see it as a list of [snarky teacher's quotes](https://i.stack.imgur.com/ZjOYA.jpg)
 )
 
 What is important, this list *outlaws most newbie questions out there.* And it's not normal. There is a huge mismatch between what people take Stack Overflow for, and what Stack Overflow actually is. And noobs come asking questions anyway, only to face with closures and downvotes. 
