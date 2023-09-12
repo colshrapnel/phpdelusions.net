@@ -70,22 +70,25 @@ Yes, a relatively small number of most popular questions gradually get something
 - defend a selfish author who doesn't want their answer to be improved.
 - doesn't distinguish between ad-hoc questions and canonical ones. Quite too often, when you land on a question with a canonical title, all you see is some shortcut or a questionable tradeoff. Just a couple examples: [Cannot delete or update a parent row](https://stackoverflow.com/a/17828127/285587) and [mysql error 1364 Field doesn't have a default values](https://stackoverflow.com/questions/15438840/mysql-error-1364-field-doesnt-have-a-default-values) are quite frequent SQL errors that deserve a thorough explanation. But both topmost answers contain anything but such an explanation. Yes, for the *particular ad-hoc question* they possibly offer a plausible tradeoff. But after picking up some wind, a question automatically becomes a *canonical post on the topic*, where people come with different problems indicated by the same error message. And such a narrow-minded answer instantly becomes a disservice.
 
-The recent case made it clear: the internal stance of Stack Overlow is diametrically opposite to what programmers expect from it. Some volunteer, Jan Schultke, who took a habit of "regularly modernizing C++ questions and answers by adding notes or changes based on more recent versions", had been reproached for it. And decided to ask a question on Meta, which boils down to [whether old but popular answers should be updated or left as is](https://meta.stackoverflow.com/q/426288/285587). And active users of Stack Overflow voted for the latter: the question had -10 and a sole answer suggesting to leave the old answer alone had something like +10. But after the link to this question had been [posted on Raddit](https://old.reddit.com/r/programming/comments/168u010/should_an_answer_on_stack_overflow_remain_a/), the question got quite a positive score and a couple supporting answers appeared, while comments on Reddit agreed on "that's what I would hope to see on SO". And it makes sense. Remember that library of high quality answers. Nowhere does the tour page say "a memorial of old practices". Stack Overflow must change its stance on this matter too. 
+The recent case made it clear: the internal stance of Stack Overflow is diametrically opposite to what programmers expect from it. Some volunteer, Jan Schultke, who took a habit of "regularly modernizing C++ questions and answers by adding notes or changes based on more recent versions", had been reproached for it. And decided to ask a question on Meta, [When do modernization edits conflict with the author's intent?](https://meta.stackoverflow.com/q/426288/285587), which, to me, boils down to a more generic "Whether old but popular answers should be updated or left as is?". And active users of Stack Overflow voted for the latter: on the next day the question had -10 and a sole answer suggesting to leave old answers alone had something like +20. But after I [posted the link on Reddit](https://old.reddit.com/r/programming/comments/168u010/should_an_answer_on_stack_overflow_remain_a/), the question changed its score to positive and got quite a reasonable answer supporting the modernization of old answers, while comments on Reddit agreed on "that's what I would hope to see on SO". 
 
-I am strongly convinced that such a library should provide a current mature approach by default, while optionally listing legacy and bleeding edge solutions. And in this regard, it's better to make the creation of canonical answers a distinct task, separated from answering ad-hoc questions. And it must be based on a collaborative, not competitive effort. And such answers must keep in mind an "average Joe" as its reader, not some particular person who asked.
+And it makes sense. Remember that library of high quality answers. Nowhere does the tour page say "a memorial of old practices". Stack Overflow must change its stance on this matter too. 
+
+I am strongly convinced that such a library should provide the current generic approach by default, while optionally listing legacy and bleeding edge solutions. And in this regard, I believe that a canonical answer must be specifically made, by means of editing the initial ad-hoc reply, while addressing an "average Joe" as its reader, not the original poster. And creation of such answers must be based on a collaborative, not competitive effort.
 
 Every question that survives the "community value" screen, has to be heavily edited:
 
-- The title must be made to reflect the exact problem (That's a pet peeve of mine. When you open a question titled "How to do XXX", most likely you will see the full code that does exactly XXX! While the problem is either "how to debug XXX" or even something completely unrelated)
+- The title must be made to reflect the exact problem
 - All insignificant details must be edited out
 - The answer should address the generic question instead of dwelling on irrelevant issues
-- The best practice should be provided first, while all shortcuts and tradeoffs mentioned later, with their drawbacks well explained. And of course people should get those internet points for all that effort.  
+- The best practice should be provided first, while all shortcuts and tradeoffs mentioned later, with their drawbacks well explained
+- The most important part: canonical answers must be regularly maintained and updated, to be kept up to date
 
-The participant's mindset must be changed as well. They should stop catering to the OP who asked a question ten years ago, but focus on providing a generic answer for a wider audience.
+And of course people should be rewarded with those Internet points for all that effort. Or even something more substantial, this "by me a coffee" stuff is not that hard to implement.
 
 ### Separating the achievement of two goals
 
-As you can see, currently Stack Overflow puts the burden of creating reference questions for that "library of high quality answers" on the people who ask. "Either make your question canonical or go away". But it will never work. That task should be carried on by the community, by people of experience, not by people who ask questions.
+As you can see, currently Stack Overflow puts the burden of creating reference questions for the Library on the people who ask. "Either make your question canonical or go away". But it will never work. That task should be carried on by the community, by people of experience, not by people who ask questions.
 
 And for the best results, achievement of these goals is better to be physically separated. Ad-hoc questions could be answered in a forum-like mode, a dialogue that allows both parties to add code or images, to answer each other's questions. Although Stack Overflow takes pride for being not a forum, there is nothing to boast about. Many questions simply *cannot* be answered without a discussion. Why not make it comfortable for all parties?
 
@@ -96,6 +99,8 @@ Such a separation will solve many problems at once:
 - canonical answers won't be distracted by irrelevant details or noise (which was the initial goal when Stack Overflow claimed itself "not a forum")
 - ad-hoc questions will be answered in a really non-judging, friendly and convenient environment
 - new participants will earn as much reputation as they want
+
+And Stack Overflow will indeed become that "Library of detailed, high-quality answers to every question about programming" it aspires to be.
 
 ---
 
