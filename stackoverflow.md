@@ -11,7 +11,7 @@ Stack Overflow declares its Noble goal as ["to build a library of detailed, high
 
 Besides, there is a major miscalculation that hinders the achievement of the Noble goal: Stack Overflow puts too much emphasis on adding new answers, more and more new answers. Only adding new answers will earn you a decent amount of Internet points, while updating an existing answer will bring you none. Ironically, while this approach is great for answering ad-hoc questions, but for the Library it doesn't seem so. Just a funny fact: on the same [tour page](https://stackoverflow.com/tour) Stack Overflow is proud to call itself "not a forum". But if you open a [random popular question](https://stackoverflow.com/q/40480/285587), it looks *exactly like a forum thread,* with dozens (if not hundreds) of replies, some of them even [arguing with each other](https://stackoverflow.com/a/51522896/285587). Which I consider the direct result of such a policy.
 
-Still, the experience is the worst for people looking for help.
+Still, the experience for people who come for help is the worst.
 
 ### The problem
 
